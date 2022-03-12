@@ -39,7 +39,7 @@ Topics:
 
 | Day | Topic | Assignment | Slide |
 |:----|:---|:---|:---|
-|(1)<br>Apr. 11| Introduction | task0 | |
+|(1)<br>Apr. 11| Introduction | [task0](task0) | |
 |(2)<br>Apr. 18| Affine transfrormation | task1 | - |
 |(3)<br>Apr. 25| Character deformation Ⅰ | task2 | - |
 |(4)<br>May 2| Ray Casting | task3 | - |

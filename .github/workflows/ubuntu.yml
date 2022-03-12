@@ -1,0 +1,40 @@
+name: BuildTasks
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main, task0, task1, task2, task3, task4, task5, task6, task7, task8, task9, task11]
+
+env:
+  BUILD_TYPE: Debug
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+
+    - name: get_glfw
+      run: |
+        sudo apt-get update
+        sudo apt-get install \
+          xorg-dev libx11-dev \
+          libglu1-mesa libglu1-mesa-dev \
+          libgl1-mesa-glx libgl1-mesa-dev
+        sudo apt-get install libglfw3
+        sudo apt-get install libglfw3-dev
+
+    - name: get_delfem2
+      run: |
+        git submodule update --init -- 3rd_party/delfem2
+
+    - name: get_eigen
+      run: |
+        sudo apt-get install libeigen3-dev
+
+    - name: build
+      run: |
+        cmake .
+        cmake --build .

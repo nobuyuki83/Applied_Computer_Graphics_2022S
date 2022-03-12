@@ -1,5 +1,7 @@
 cmake_minimum_required(VERSION 3.12)
 
+#############################
+# set C++ detail
 enable_language(CXX)
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED TRUE)
@@ -9,22 +11,27 @@ ELSE()
   set(CMAKE_CXX_FLAGS "-Wall -Wextra -g")
 ENDIF()
 
+#############################
+# set project name
+
 project(task0)
 
-################################
+#############################
+# specifying libraries to use
 
-# glfw
+# use opengl
+find_package(OpenGL REQUIRED)
+
+# use glfw
 set(CMAKE_PREFIX_PATH ${CMAKE_CURRENT_SOURCE_DIR}/../external/glfwlib)
 find_package(glfw3 REQUIRED)
 
-# opengl
-find_package(OpenGL REQUIRED)
-
-# eigen
-set(CMAKE_PREFIX_PATH ${CMAKE_CURRENT_SOURCE_DIR}/../external/eigenlib)
+# use eigen
+set(CMAKE_PREFIX_PATH ${CMAKE_CURRENT_SOURCE_DIR}/../external/eigen/)
 FIND_PACKAGE(Eigen3 REQUIRED)
 
-################################
+########################
+# include, build, & link
 
 include_directories(
 )
@@ -38,3 +45,12 @@ target_link_libraries(${PROJECT_NAME}
   glfw
   Eigen3::Eigen
 )
+
+#############################
+# showing status of libraries
+
+GET_TARGET_PROPERTY(GLFW_INCLUDE_DIR
+  glfw INTERFACE_INCLUDE_DIRECTORIES)
+message(STATUS "glfw include directory: ${GLFW_INCLUDE_DIR}")
+
+message(STATUS "eigen3 include directory: ${EIGEN3_INCLUDE_DIR}")

@@ -1,9 +1,11 @@
-#include <GLFW/glfw3.h>
-#include <cstdlib>
 #include <cstdio>
+#include <cstdlib>
+#define GL_SILENCE_DEPRECATION
+#include <GLFW/glfw3.h>
 
 // print out error
-static void error_callback(int error, const char* description)
+static void error_callback(
+  [[maybe_unused]] int error, const char* description)
 {
   fputs(description, stderr);
 }
