@@ -2,23 +2,18 @@
 
 # Task0: Build C++ Program with CMake
 
-**Deadline: Apr.22th(Thu) at15:00pm**
-
-
+**Deadline: Apr.14th(Thu) at 15:00pm**
 
 
 
 ![preview](task0_preview.png)
 
-Follow the instruction below to build the attached C++ code. This code will display an OpenGL window showing a triangle.  Take a screenshot of the window (it should look like the image above) and paste it below.  By putting the imae under the directory `pba-<username>/task0` and edit this markdown document. 
+Follow the instruction below to build the attached C++ code. This code will display an OpenGL window showing a triangle.  Take a screenshot of the window (it should look like the image above) and paste it below.  By putting the imae under the directory `cga-<username>/task0` and edit this markdown document. 
 
 === (paste the screenshot image here`![](image file name)` ) === 
 
 
-
 ----
-
-
 
 
 ## Instruction 
@@ -36,15 +31,14 @@ You need to have **git**, **cmake**, and **C++ compiler** in your computer to co
 if you don't have the local repository, clone it from the remote repository
 
 ```bash
-$ git clone https://github.com/PBA-2021S/pba-<username>.git
+$ git clone https://github.com/ACG-2022S/acg-<username>.git
 ```
 
 Go to the top of the local repository
 
 ```bash
-$ cd pba-<username>     # go to the local repository
+$ cd acg-<username>     # go to the local repository
 ```
-
 
 
 ### Update Local Repository
@@ -61,10 +55,9 @@ $ git reset --hard origin/main  # reset the local main branch same as remote rep
 
 ### Set Up GLFW Library
 
-`GLFW` library is necessary to compile the code. Read the following document to set up the library under `pba-<username>/3rd_party/`
+`GLFW` library is necessary to compile the code. Read the following document to install the library.
 
 [How to Set Up GLFW Library](../doc/setup_glfw.md)
-
 
 
 ### Creating a Branch
@@ -84,7 +77,6 @@ $ git branch -a   # make sure you are in the task0 branch
 ```
 
 
-
 ### Compile the Code and Edit This Document
 
 After the environment is ready, let's build and compile the code. We do **out-of-source** build by making a new directory for build `task0/build` and compile inside that directory
@@ -95,8 +87,7 @@ $ cd build
 $ cmake .. 
 $ cmake --build .
 ```
-Update this markdown document by editing `pba-<username>/task0/README.md` .Please learn the syntax of the markdown document by yourself.
-
+Update this markdown document by editing `acg-<username>/task0/README.md` .Please learn the syntax of the markdown document by yourself.
 
 
 ### Submit
@@ -104,7 +95,7 @@ Update this markdown document by editing `pba-<username>/task0/README.md` .Pleas
 Finally, you submit the document by pushing to the `task0` branch of the remote repository. 
 
 ```bash
-cd pba-<username>    # go to the top of the repository
+cd acg-<username>    # go to the top of the repository
 git status  # check the changes
 git add .   # stage the changes
 git status  # check the staged changes
@@ -112,14 +103,12 @@ git commit -m "task0 finished"   # the comment can be anything
 git push --set-upstream origin task0  # up date the task0 branch of the remote repository
 ```
 
-got to the GitHub webpage `https://github.com/PBA-2021S/pba-<username>` . If everything looks good on this page, make a pull request. 
+got to the GitHub webpage `https://github.com/ACG-2022S/acg-<username>` . If everything looks good on this page, make a pull request. 
 
 ![](../doc/pullrequest.png)
 
 
-
 ----
-
 
 
 
@@ -127,11 +116,5 @@ got to the GitHub webpage `https://github.com/PBA-2021S/pba-<username>` . If eve
 
 - I mistakenly submit the assignement in the `main` branch
   - Make a branch `task0` and submit again
-
-
-
-
-
-
 
 

@@ -31,5 +31,6 @@
 *.out
 *.app
 
+glfwlib
 *.DS_Store  
 build

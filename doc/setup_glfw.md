@@ -1,26 +1,61 @@
 # How to Set Up GLFW Library
 
+GLFW is a library to open a window with OpenGL graphics visualization. 
 
-
-Namely, you can set up GLFW in three ways  
-
-- download `glfw` using package manager (for Mac and Ubuntu)
+Namely, there are three ways to set up GLFW:  
+- using package manager (for Mac and Ubuntu)
 - download pre-build library (Mac and Windows)
-- compile the GLFW source code by yourself
+- build the source code (for all OSs)
 
-Below, we discuss these options in detail 
+Below, we discuss these options in detail for each OS
 
 ----
 
+## Mac 
 
-
-## From Package Manager
+### Install from package manager
 
 for Mac, install `glfw` using package manager `brew` as
 
 ```bash
 $ brew install glfw
 ```
+
+### Install using pre-compiled library
+
+Download the pre-compiled library (`glfw-3.*.*.bin.MACOS.zip`) from
+
+ https://www.glfw.org/download.html
+
+Extract the compressed file and rename the folder as `glfwlib` and put it under the `external/` folder of the reository. 
+
+Make sure you have a header file `glfw3.h` at
+
+```
+acg-<username>/external/glfwlib/include/GLFW/glfw3.h
+```
+
+### Install from source code
+
+Alternatively, you can build `glfw` from source code and put the library under `external/glfwlib` with
+
+```bash
+$ git submodule update --init 3rd_party/glfw
+$ cd external/glfw
+$ cmake .
+$ cmake --build . --config Release
+$ cmake --install . --prefix ../glfwlib
+```
+
+Make sure you have a header file `glfw3.h` at
+
+```
+acg-<username>/external/glfwlib/include/GLFW/glfw3.h
+```
+
+----
+## Ubuntu
+
 For ubuntu, install `glfw` using `apt-get` as
 
 ```bash
@@ -30,59 +65,57 @@ $ sudo apt-get install -y libx11-dev xorg-dev \
 $ sudo apt install -y libglfw3 libglfw3-dev
 $ sudo apt install -y libglew-dev
 ```
-Unfortunately, for windows, there is not a easyway to install `glfw` with commands.
 
----
+### Build from Source Code
 
+Alternatively, you can build `glfw` from source code and put the library under `external/glfwlib` with
 
+```bash
+$ git submodule update --init external/glfw
+$ cd external/glfw
+$ cmake .
+$ cmake --build . --config Release
+$ cmake --install . --prefix ../glfwlib
+```
 
-## Pre-Build Binary Library
+Make sure you have a header file `glfw3.h` at
 
-You can download the prebuild library from here
+```
+acg-<username>/external/glfwlib/include/GLFW/glfw3.h
+```
+
+----
+
+## Windows
+
+### Install using pre-compiled library
+
+Download the pre-compiled library (`glfw-3.*.*.bin.WIN64.zip`) from
 
  https://www.glfw.org/download.html
 
-Extract the compressed file and rename it as `GLFW_Lib` and put it under the `3rd_party/` folder of the reository. 
+Extract the compressed file and rename the folder as `glfwlib` and put it under the `external/` folder of the reository. 
 
 Make sure you have a header file `glfw3.h` at
 
 ```
-pba-<username>/3rd_party/GLFW_Lib/include/GLFW/glfw3.h
+acg-<username>/external/glfwlib/include/GLFW/glfw3.h
 ```
 
+### Build from Source Code
 
-
-
-
----
-
-
-## Build from Source Code
-
-Alternatively, you can build `glfw` from source code and put the library under `3rd_party/GLFW_Lib` with
+Alternatively, you can build `glfw` from source code and put the library under `external/glfwlib` with
 
 ```bash
-$ mkdir 3rd_party/GLFW_Lib 
-$ git submodule update --init 3rd_party/glfw
-$ cd 3rd_party/glfw
+$ git submodule update --init external/glfw
+$ cd external/glfw
 $ cmake .
 $ cmake --build . --config Release
-$ cmake --install . --prefix ../GLFW_Lib 
+$ cmake --install . --prefix ../external
 ```
 
 Make sure you have a header file `glfw3.h` at
 
 ```
-pba-<username>/3rd_party/GLFW_Lib/include/GLFW/glfw3.h
+acg-<username>/external/glfwlib/include/GLFW/glfw3.h
 ```
-
-
-
-
-
-
-
- 
-
-
-
