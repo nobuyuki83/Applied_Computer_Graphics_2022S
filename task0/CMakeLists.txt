@@ -29,7 +29,7 @@ find_package(glfw3 REQUIRED)
 # use eigen
 # find_package(Eigen3 REQUIRED) # works only for installation by package managers
 FILE(GLOB EIGEN3_ROOT ${CMAKE_CURRENT_SOURCE_DIR}/../external/eigen*) # find downloaded eigen directories in 3rd_party
-message(STATUS "found eigen path: ${EIGEN3_ROOT}")
+message(STATUS "eigen directory candidate: ${EIGEN3_ROOT}")
 set(ENV{EIGEN3_ROOT} "${EIGEN3_ROOT}")
 include(${CMAKE_CURRENT_SOURCE_DIR}/../external/FindEigen3.cmake) # call script to find eigen3
 
