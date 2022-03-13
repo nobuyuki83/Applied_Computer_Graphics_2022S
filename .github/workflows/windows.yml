@@ -1,4 +1,4 @@
-name: BuildTasks
+name: Build_Win
 
 on:
   push:

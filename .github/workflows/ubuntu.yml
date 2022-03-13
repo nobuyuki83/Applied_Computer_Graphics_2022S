@@ -1,4 +1,4 @@
-name: BuildTasks
+name: Build_Linux
 
 on:
   push:

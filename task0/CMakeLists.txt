@@ -29,8 +29,10 @@ find_package(glfw3 REQUIRED)
 # use eigen
 if(EXISTS ${CMAKE_CURRENT_SOURCE_DIR}/../external/eigen/FindEigen3.cmake)
   include(${CMAKE_CURRENT_SOURCE_DIR}/../external/eigen/FindEigen3.cmake) # call script to find eigen3
+else()
+  FIND_PACKAGE(Eigen3 REQUIRED) # common command to specify eigen  
 endif()
-FIND_PACKAGE(Eigen3 REQUIRED) # common command to specify eigen
+
 
 
 ########################
