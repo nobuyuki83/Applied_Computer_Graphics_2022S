@@ -27,13 +27,11 @@ set(CMAKE_PREFIX_PATH ${CMAKE_CURRENT_SOURCE_DIR}/../external/glfwlib)
 find_package(glfw3 REQUIRED)
 
 # use eigen
-if(EXISTS ${CMAKE_CURRENT_SOURCE_DIR}/../external/eigen/FindEigen3.cmake)
-  include(${CMAKE_CURRENT_SOURCE_DIR}/../external/eigen/FindEigen3.cmake) # call script to find eigen3
-else()
-  FIND_PACKAGE(Eigen3 REQUIRED) # common command to specify eigen  
-endif()
-
-
+# find_package(Eigen3 REQUIRED) # works only for installation by package managers
+FILE(GLOB EIGEN3_ROOT ${CMAKE_CURRENT_SOURCE_DIR}/../external/eigen*) # find downloaded eigen directories in 3rd_party
+message(STATUS "found eigen path: ${EIGEN3_ROOT}")
+set(ENV{EIGEN3_ROOT} "${EIGEN3_ROOT}")
+include(${CMAKE_CURRENT_SOURCE_DIR}/../external/FindEigen3.cmake) # call script to find eigen3
 
 ########################
 # include, build, & link
@@ -58,4 +56,6 @@ GET_TARGET_PROPERTY(GLFW_INCLUDE_DIR
   glfw INTERFACE_INCLUDE_DIRECTORIES)
 message(STATUS "glfw include directory: ${GLFW_INCLUDE_DIR}")
 
-message(STATUS "eigen3 include directory: ${EIGEN3_INCLUDE_DIR}")
+GET_TARGET_PROPERTY(EIGEN3_EIGEN_INCLUDE_DIR
+  Eigen3::Eigen INTERFACE_INCLUDE_DIRECTORIES)
+message(STATUS "eigen3 include directory: ${EIGEN3_EIGEN_INCLUDE_DIR}")
