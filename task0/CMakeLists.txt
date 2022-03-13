@@ -27,8 +27,11 @@ set(CMAKE_PREFIX_PATH ${CMAKE_CURRENT_SOURCE_DIR}/../external/glfwlib)
 find_package(glfw3 REQUIRED)
 
 # use eigen
-set(CMAKE_PREFIX_PATH ${CMAKE_CURRENT_SOURCE_DIR}/../external/eigen/)
-FIND_PACKAGE(Eigen3 REQUIRED)
+if(EXISTS ${CMAKE_CURRENT_SOURCE_DIR}/../external/eigen/FindEigen3.cmake)
+  include(${CMAKE_CURRENT_SOURCE_DIR}/../external/eigen/FindEigen3.cmake) # call script to find eigen3
+endif()
+FIND_PACKAGE(Eigen3 REQUIRED) # common command to specify eigen
+
 
 ########################
 # include, build, & link
