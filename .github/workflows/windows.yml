@@ -16,21 +16,21 @@ jobs:
     steps:
     - uses: actions/checkout@v2
 
-    - name: get_glfw
+    - name: install glfw
       run: |
-        git submodule update --init -- 3rd_party/glfw
-        cd 3rd_party/glfw
+        git submodule update --init -- external/glfw
+        cd external/glfw
         cmake . -A x64
         cmake --build . --config Release
         cmake --install . --prefix ../glfwlib
 
-    - name: get_delfem2
+    - name: install delfem2
       run: |
-        git submodule update --init -- 3rd_party/delfem2
+        git submodule update --init -- external/delfem2
 
     - name: get_eigen
       run: |
-        git submodule update --init 3rd_party/eigen
+        git submodule update --init -- external/eigen
 #        the following costs a lot of $ on GitHub Actions
 #        cd 3rd_party/eigen
 #        mkdir build

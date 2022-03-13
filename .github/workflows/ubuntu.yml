@@ -16,7 +16,7 @@ jobs:
     steps:
     - uses: actions/checkout@v2
 
-    - name: get_glfw
+    - name: install glfw
       run: |
         sudo apt-get update
         sudo apt-get install \
@@ -26,11 +26,11 @@ jobs:
         sudo apt-get install libglfw3
         sudo apt-get install libglfw3-dev
 
-    - name: get_delfem2
+    - name: install delfem2
       run: |
-        git submodule update --init -- 3rd_party/delfem2
+        git submodule update --init -- external/delfem2
 
-    - name: get_eigen
+    - name: install eigen
       run: |
         sudo apt-get install libeigen3-dev
 
