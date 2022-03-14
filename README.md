@@ -1,4 +1,4 @@
-# Applied Computer Graphics
+# Applied Computer Graphics 4860-1084
 
 Lecture at graduate school of information science and technology in the university of Tokyo, spring semester, 2022
 
@@ -28,10 +28,10 @@ There are C++ programming assignments to acquire research-oriented graphics prog
 
 Topics:
 - affine transformation / homography
-- character animation
+- character animation (forward / inverse kinematics)
 - visualization
 - optimization
-- mesh deformation
+- variational mesh deformation
 - fluid simulation
 
 
