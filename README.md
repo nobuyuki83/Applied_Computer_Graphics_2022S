@@ -12,7 +12,7 @@ ITC-LMS (for Slack and GitHub Classroom invitaitons):
 Dr. Nobuyuki Umetani 
 - email: umetani@ci.i.u-tokyo.ac.jp
 - url: http://www.nobuyuki-umetani.com/
-- lab's website: https://cgenglab.github.io/labpage/en/
+- lab's web page: https://cgenglab.github.io/labpage/en/
 
 ## Time
 
@@ -21,18 +21,16 @@ Monday 3rd period, 13:00pm - 14:30pm
 
 ## Course Description
 
-Computer-generated images are everywhere in movies, video games, and VR. 
-This course is an introduction to the techniques to animate objects in computer graphics based on the law of physics. 
-The aim of the course is to get familiar with applied mathematics such as linear algebra, vector analysis, partial differential equations, variational principle, optimization, and numerical analysis through the animation techniques for particle systems, rigid bodies, elastic bodies. 
-There are C++ programming assignments to acquire research-oriented graphics programming skills. 
+Computer graphics is a technology to computationally represent objects' geometry, appearance and movement. This course is an introduction to the techniques generally seen in computer graphics. The aim of the course is to get familiar with applied mathematics such as linear algebra, vector analysis, partial differential equations, numerical analysis and optimization through the topics in computer graphics. There are C++ programming assignments to acquire research-oriented graphics programming skills such as OpenGL, Eigen matrix library, Git and cmake. 
 
 Topics:
-- affine transformation / homography
-- character animation (forward / inverse kinematics)
-- visualization
-- optimization
+- affine transformation & homography
+- character animation (forward & inverse kinematics)
+- visualization (rasterization / ray casting)
+- optimization ( continuous optimization / dynamic programming )
+- parametric curves & surfaces
 - variational mesh deformation
-- fluid simulation
+- grid-based fluid simulation
 
 
 ## Lecture Schedule
@@ -40,8 +38,8 @@ Topics:
 | Day | Topic | Assignment | Slide |
 |:----|:---|:---|:---|
 |(1)<br>Apr. 11| Introduction | [task0](task0) | |
-|(2)<br>Apr. 18| Affine transfrormation | task1 | - |
-|(3)<br>Apr. 25| Character deformation Ⅰ | task2 | - |
+|(2)<br>Apr. 18| Affine transfrormation | [task1](task1) | - |
+|(3)<br>Apr. 25| Character deformation Ⅰ | [task2](task2) | - |
 |(4)<br>May 2| Ray Casting | task3 | - |
 |(5)<br>May 9| Rasterization | task4 | - |
 |(6)<br>May 16| Optimization Ⅰ | task5 | - |
@@ -80,7 +78,7 @@ There are many small programming assignments. To do the assignments, you need to
 
 - [task0](task0): build C++ Program with CMake
 - [task1](task1): Affine transformation
-- [task2](task2): articulated rigid bone
+- [task2](task2): articulated rigid bones
 - [task3](task3): ray casting 
 - [task4](task4): rastering
 - [task5](task5): navigation mesh
@@ -92,7 +90,7 @@ There are many small programming assignments. To do the assignments, you need to
 
 
 ## Slides
-
+ｗｄ
 
 
 

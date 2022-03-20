@@ -1,10 +1,10 @@
-cmake_minimum_required(VERSION 3.12)  # specify the version of cmake
+cmake_minimum_required(VERSION 3.12)
 
 #############################
 # set C++ detail
-enable_language(CXX)  # we are using C++
-set(CMAKE_CXX_STANDARD 17)  # we are using C++ 17
-set(CMAKE_CXX_STANDARD_REQUIRED TRUE)  # we are using STL library
+enable_language(CXX)
+set(CMAKE_CXX_STANDARD 17)
+set(CMAKE_CXX_STANDARD_REQUIRED TRUE)
 IF(MSVC)
   set(CMAKE_CXX_FLAGS "/W4")
 ELSE()
@@ -12,9 +12,12 @@ ELSE()
 ENDIF()
 
 #############################
-# set project name
 
-project(task0)
+# set project name
+project(task1)
+
+# define a macro to get absolute path in C++
+add_definitions(-DSOURCE_DIR="${PROJECT_SOURCE_DIR}")
 
 #############################
 # specifying libraries to use
@@ -23,19 +26,19 @@ project(task0)
 find_package(OpenGL REQUIRED)
 
 # use glfw
-set(CMAKE_PREFIX_PATH ${CMAKE_CURRENT_SOURCE_DIR}/../external/glfwlib) # give hint to cmake to find glfw library
+set(CMAKE_PREFIX_PATH ${CMAKE_CURRENT_SOURCE_DIR}/../external/glfwlib)
 find_package(glfw3 REQUIRED)
 
 # use eigen
-# find_package(Eigen3 REQUIRED) # this works only for installation by package managers
+# find_package(Eigen3 REQUIRED) # works only for installation by package managers
 FILE(GLOB EIGEN3_ROOT ${CMAKE_CURRENT_SOURCE_DIR}/../external/eigen*) # find downloaded eigen directories in 3rd_party
-message(STATUS "eigen directory candidate: ${EIGEN3_ROOT}")
 include(${CMAKE_CURRENT_SOURCE_DIR}/../external/FindEigen3.cmake) # call script to find eigen3
 
 ########################
-# include, build, and link
+# include, build, & link
 
-include_directories(
+include_directories(${PROJECT_NAME}
+  ${CMAKE_CURRENT_SOURCE_DIR}/../external/delfem2/include
 )
 
 add_executable(${PROJECT_NAME}
@@ -43,13 +46,14 @@ add_executable(${PROJECT_NAME}
 )
 
 target_link_libraries(${PROJECT_NAME}
-  OpenGL::GL  # use OpenGL library
-  glfw  # use glfw library
-  Eigen3::Eigen  # use Eigen library
+  OpenGL::GL
+  glfw
+  Eigen3::Eigen
 )
 
 #############################
 # showing status of libraries
+
 GET_TARGET_PROPERTY(GLFW_INCLUDE_DIR
   glfw INTERFACE_INCLUDE_DIRECTORIES)
 message(STATUS "glfw include directory: ${GLFW_INCLUDE_DIR}")

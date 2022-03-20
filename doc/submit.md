@@ -19,13 +19,9 @@ The assignments need to be submitted using "pullrequest" functionality of the Gi
 Let's assume you are looking at the repository `acg-<username>` (e.g., pba-nobuyuki83) and the  `task<task number>` is the assignment (e.g., task2). The submission is made by
 
 1. create a branch of the name `task<task number>`
-
 2. follow the instruction written in `acg-<username>/task<task number>/README.md`
-
 3. push the repository with the branch `task<task number>`
-
 4. make a pull request on GitHub page
-
 5. Instructor will close the pull request after grading. 
 
    
@@ -38,7 +34,7 @@ First of all, you need to setup C++ Probramming environment (git, cmake, c++ com
 
 
 
-## Download the Repository
+## Clone the Repository
 
 If you don't have the local repository in your computer, clone it from the remote repository
 
@@ -46,7 +42,7 @@ If you don't have the local repository in your computer, clone it from the remot
 $ git clone https://github.com/ACG-2022S/acg-<username>.git
 ```
 
-**Before doing each assignment**, Sync the local repository to the remote repository.
+**Before doing each assignment**, synchronize the local repository to the remote repository.
 
 ```bash
 $ cd acg-<username>   # go to the local repository
@@ -122,10 +118,14 @@ Go to the GitHub webpage `https://github.com/ACG-2022S/acg-<username>` . If ever
 
 
 
-## Trouble Shooting
+## Tips for Git / GitHub
+- Do not put any binary files (e.g., executable, binary files) except for image files. Put only readable files in the repository.
 
-- I mistakenly submit the assignement in the `main` branch
-  - Make a branch `task<number>` and submit again
-- Many library files are shown when I type `git status` 
-  - add `acg-<username>/.gitignore` the directory/files need to be ignored
+- If many binary files are shown when I type `git status`, write the files/directories you want to ignore into `acg-<username>/.gitignore`.
+
+- If somethig goes wrong, put the local repository somewhere and start again from **cloning the repositotry**.
+
+- If you get errors, try to read them. If you do not understand what the error says, search the error message on the web.
+
+- If you mistakenly submit the assignement in the `main` branch, make a branch `task<number>` and submit again. 
 

@@ -52,7 +52,7 @@ acg-<username>/external/eigen/Eigen/Dense
 
 
 ---
-## Ubuntu
+## Ubuntu or Windows Subsystem for Linux (WSL)
 
 ### Install from Package Manager
 

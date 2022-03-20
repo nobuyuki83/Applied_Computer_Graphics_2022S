@@ -1,8 +1,9 @@
 # How to Set Up C++ Programming Environment
 
 
+To do the assignment, it is necessary to set up the C++ programming environment. Namely, you need **Git** , **C++ Compiler** (of course!), **cmake**, and **IDE** installed in your computer. This document targets **MacOS**, **Ubuntu** and **Windows**. 
 
-To do the assignment, it is necessary to set up the C++ programming environment. Namely, you need **Git** , **C++ Compiler** (of course!) and **cmake**  installed in your computer. This document targets **MacOS**, **Ubuntu** and **Windows**. Depending on the versions of the OS, you may encounter some problems, but I encourage you to sove it by yourself first. These toos are very poupular and there are tons of information on the internet. If you solve the problem, let the instructer know on the slack the problem and solution together with the version of your OS.
+Depending on the versions of the OS, you may encounter some problems I encourage you to sove it by yourself first. These toos are very poupular and there are tons of information on the internet! If you solve the problem, let the instructer know on the slack the problem and solution together with the version of your OS.
 
 
 
@@ -62,7 +63,7 @@ https://visualstudio.microsoft.com/vs/features/cplusplus/
 
 ## CMake
 
-CMake is used to *configure* the project i.e., making a project file to build the code based on the setting written in `CMakeLists.txt`. 
+We use `CMake` to *configure* the project i.e., making a project file to build the code based on the setting written in `CMakeLists.txt`.
 
 Type following commands to check if you have `cmake` or not in your compuer.
 
@@ -75,6 +76,13 @@ If not, download the `cmake` from the link below and instal in your computer.
 https://cmake.org/download/
 
 Alternatively, you can install `cmake` using a package manager such as `apt-get` for Ubuntu and `brew` for MacOS. 
+
+
+## Integrated Development Environment (IDE)
+
+There are various IDE for C++. In this couse, I recommend `CLion` and `Visual Studio Code`, they are both very powerful free for students.
+
+
 
 
 
