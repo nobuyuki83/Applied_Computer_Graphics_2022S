@@ -60,7 +60,7 @@ Topics:
 
 - 20% lecture attendance
   - Attendance is counted based on writing a secret keyword on LMS. The keyword is announced for each lecture.  
-- 80% small assignemnts
+- 80% small assignments
   - see below
 
 ## Assignemnts
