@@ -40,3 +40,5 @@ external/glfwlib
 external/eigen-*
 *.DS_Store  
 build
+
+*/main_ans.cpp

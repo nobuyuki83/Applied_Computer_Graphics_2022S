@@ -1,8 +1,10 @@
 # Task2: Articulated Rigid Bodies
 
-**Deadline: Apr.28th(Thu) at 15:00pm**
+**This assignment is under construction**
 
 ![preview](../doc/mole.png)
+
+**Deadline: Apr.28th(Thu) at 15:00pm**
 
 Follow the instruction below to build the attached C++ code. This code will display an OpenGL window showing a triangle.  Take a screenshot of the window (it should look like the image above) and paste it below.  By putting the imae under the directory `cga-<username>/task0` and edit this markdown document. 
 
@@ -11,25 +13,16 @@ Follow the instruction below to build the attached C++ code. This code will disp
 
 ----
 
+## Before Doing Assignment
 
-## Setting up
+If you have not done the [task0](../task0), do it first to set up the C++ graphics developtment environment.
 
-If you haven't yet, set up C++ graphics development environment following the documents below.
-
-- [Setting up Development Environment](../doc/setup_env.md)
-- [Setting up Eigen Library](../doc/setup_eigen.md)
-- [Setting up GLFW Library](../doc/setup_glfw.md)
-
-The following document shows how to submit the assignment
-
-- [How to Submit the Assignment](../doc/submit.md)
-
-Before doing the assignment by modifying `main.cpp`,
+Follow [this document](../doc/submit.md) to submit the assignment, In a nutshell, before doing the assignment,
 - make sure you synchronized the `main ` branch of your local repository  to that of remote repository.
 - make sure you created branch `task1` from `main` branch.
 - make sure you are currently in the `task1` branch (use `git branch -a` command).
 
-After modifying the code, push the code and submit a pull request.
+Now you are ready to go!
 
 ---
 
