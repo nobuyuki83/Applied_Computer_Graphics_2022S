@@ -37,7 +37,7 @@ Topics:
 
 | Day | Topic | Assignment | Slide |
 |:----|:---|:---|:---|
-|(1)<br>Apr. 11| **Introduction**<br>graphics pipeline |  | [3] |
+|(1)<br>Apr. 11| **Introduction**<br>graphics pipeline |  | [[3]](http://nobuyuki-umetani.com/acg2022s/graphics_pipeline.pdf) |
 |(2)<br>Apr. 18| Affine transfrormation | [task0](task0) | - |
 |(3)<br>Apr. 25| Character deformation Ⅰ | [task2](task2) | - |
 |(4)<br>May 2| Ray Casting | task3 | - |
@@ -91,10 +91,10 @@ There are many small programming assignments. To do the assignments, you need to
 
 ## Slides
 
-- [[1] C++ programming](https://www.dropbox.com/s/xyppxcdn5k1ux8z/cpp.pdf?dl=0)
-- [[2] Git+GitHub](https://www.dropbox.com/s/7fishbhc841l9vh/git.pdf?dl=0)
+- [[1] C++ programming](http://nobuyuki-umetani.com/acg2022s/cpp.pdf)
+- [[2] Git+GitHub](http://nobuyuki-umetani.com/acg2022s/git.pdf)
 
-- [[3] Graphics Pipeline](https://www.dropbox.com/s/7fishbhc841l9vh/git.pdf?dl=0)
+- [[3] Graphics Pipeline](http://nobuyuki-umetani.com/acg2022s/graphics_pipeline.pdf)
 
 ## Reading Material
 - [Introduction to Computer Graphics by Cem Yuksel](https://www.youtube.com/watch?v=vLSphLtKQ0o&list=PLplnkTzzqsZTfYh4UbhLGpI5kGd5oW_Hh)
