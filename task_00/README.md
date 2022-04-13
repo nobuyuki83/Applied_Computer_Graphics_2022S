@@ -11,6 +11,7 @@
 Follow the instruction below to build the attached C++ code. This code will display an OpenGL window showing a triangle.  Take a screenshot of the window (it should look like the image above) and paste it below.  By putting the imae under the directory `cga-<username>/task0` and edit this markdown document. 
 
 === (paste the screenshot image here) === 
+
 ![preview](task0_tc2k.png)
 
 ----
