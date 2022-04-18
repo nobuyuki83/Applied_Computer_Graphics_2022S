@@ -76,11 +76,11 @@ $ git submodule update --init external/delfem2
 
 ## Make Branch for Each Assignment
 
-Create the `task<number>` branch and set it as the current branch. For `task1` the commands look like
+Create the `task<number>` branch and set it as the current branch. For `task01` the commands look like
 
 ```bash
-$ git branch task1    # create task1 branch
-$ git checkout task1  # switch into the task1 branch
+$ git branch task01    # create task1 branch
+$ git checkout task01  # switch into the task1 branch
 $ git branch -a       # make sure you are in the task1 branch
 ```
 
@@ -105,7 +105,7 @@ git status  # check the changes (typically few files are shown to be "updated")
 git add .   # stage the changes
 git status  # check the staged changes (typically few files re shown to be "staged")
 git commit -m "task1 finished"   # the comment can be anything
-git push --set-upstream origin task1  # update the task1 branch of the remote repository
+git push --set-upstream origin task01  # update the task1 branch of the remote repository
 ```
 
 

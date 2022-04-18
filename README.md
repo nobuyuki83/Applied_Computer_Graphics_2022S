@@ -38,15 +38,15 @@ Topics:
 | Day | Topic | Assignment | Slide |
 |:----|:---|:---|:---|
 |(1)<br>Apr. 11| **Introduction**<br>graphics pipeline |  | [[3]](http://nobuyuki-umetani.com/acg2022s/graphics_pipeline.pdf) |
-|(2)<br>Apr. 18| **Coordinate transfrormation**<br>barycentric transformation | [task0](task_00) | [[4] ](http://nobuyuki-umetani.com/acg2022s/barycentric_coordinate.pdf) |
-|(3)<br>Apr. 25| Character deformation Ⅰ | [task2](task2) | - |
-|(4)<br>May 2| Ray Casting | task3 | - |
-|(5)<br>May 9| Rasterization | task4 | - |
-|(6)<br>May 16| Optimization Ⅰ | task5 | - |
-|(7)<br>May 23| Optimization Ⅱ | task6 | - |
-|(8)<br>June 6|  Character deformation Ⅱ | task7 | - |
-|(9)<br>June 13| Variational mesh deformation | task8 | - |
-|(10)<br>June 20| Parametric curves / surfaces | task9 | - |
+|(2)<br>Apr. 18| **Coordinate transfrormation**<br>barycentric transformation | [task00](task00) | [[4] ](http://nobuyuki-umetani.com/acg2022s/barycentric_coordinate.pdf) |
+|(3)<br>Apr. 25| Character deformation Ⅰ | [task02](task02) | - |
+|(4)<br>May 2| Ray Casting | task03 | - |
+|(5)<br>May 9| Rasterization | task04 | - |
+|(6)<br>May 16| Optimization Ⅰ | task05 | - |
+|(7)<br>May 23| Optimization Ⅱ | task06 | - |
+|(8)<br>June 6|  Character deformation Ⅱ | task07 | - |
+|(9)<br>June 13| Variational mesh deformation | task08 | - |
+|(10)<br>June 20| Parametric curves / surfaces | task09 | - |
 |(11)<br>June 27| Guest lecture by Dr. Ryoichi Ando | - | - |
 |(12)<br>July 4| Grid-based Fluid Ⅰ | task10 | - |
 |(13)<br>July 11| Grid-based Fluid Ⅱ | - | - |
@@ -76,16 +76,16 @@ There are many small programming assignments. To do the assignments, you need to
 
 ### Tasks
 
-- [task0](task_00): build C++ Program with CMake
-- [task1](task1): Affine transformation
-- [task2](task2): articulated rigid bones
-- [task3](task3): ray casting 
-- [task4](task4): rastering
-- [task5](task5): navigation mesh
-- [task6](task6): laplacian mesh deformation
-- [task7](task7): inverse kinematics
-- [task8](task8): as-rigid-as possible mesh deformation
-- [task9](task9): subdivision surface
+- [task00](task00): build C++ Program with CMake
+- [task01](task01): Affine transformation
+- [task02](task02): articulated rigid bones
+- [task03](task03): ray casting 
+- [task04](task04): rastering
+- [task05](task05): navigation mesh
+- [task06](task06): laplacian mesh deformation
+- [task07](task07): inverse kinematics
+- [task08](task08): as-rigid-as possible mesh deformation
+- [task09](task09): subdivision surface
 - [task11](task11): FTDT simulation
 
 

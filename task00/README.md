@@ -1,6 +1,6 @@
 
 
-# Task0: Build C++ Program with CMake
+# Task00: Build C++ Program with CMake
 
 **Deadline: Apr. 21st(Thu) at 15:00pm**
 
@@ -62,32 +62,32 @@ $ git reset --hard origin/main  # reset the local main branch same as remote rep
 
 ### Creating a Branch
 
-To do this assignement, you need to be in the branch `task0`.  You can always check your the current branch by
+To do this assignement, you need to be in the branch `task00`.  You can always check your the current branch by
 
 ```bash
 $ git branch -a   # list all branches, showing the current branch 
 ```
 
-You are probably in the `main` branch. Let's create the `task0` branch and set it as the current branch.
+You are probably in the `main` branch. Let's create the `task00` branch and set it as the current branch.
 
 ```bash
-$ git branch task0   # create task0 branch
-$ git checkout task0  # switch into the task0 branch
+$ git branch task00   # create task0 branch
+$ git checkout task00  # switch into the task0 branch
 $ git branch -a   # make sure you are in the task0 branch
 ```
 
 
 ### Compile the Code and Edit This Document
 
-After the environment is ready, let's build and compile the code. We do **out-of-source** build by making a new directory for build `task0/build` and compile inside that directory
+After the environment is ready, let's build and compile the code. We do **out-of-source** build by making a new directory for build `task00/build` and compile inside that directory
 ```bash
-$ cd task0
+$ cd task00
 $ mkdir build
 $ cd build
 $ cmake .. 
 $ cmake --build .
 ```
-Update this markdown document by editing `acg-<username>/task0/README.md` .Please learn the syntax of the markdown document by yourself.
+Update this markdown document by editing `acg-<username>/task00/README.md` .Please learn the syntax of the markdown document by yourself.
 
 
 ### Submit
@@ -115,6 +115,6 @@ got to the GitHub webpage `https://github.com/ACG-2022S/acg-<username>` . If eve
 ## Trouble Shooting
 
 - I mistakenly submit the assignement in the `main` branch
-  - Make a branch `task0` and submit again
+  - Make a branch `task00` and submit again
 
 

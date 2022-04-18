@@ -14,7 +14,7 @@ ENDIF()
 #############################
 # set project name
 
-project(task0)
+project(task00)
 
 #############################
 # specifying libraries to use
