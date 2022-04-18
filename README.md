@@ -1,15 +1,14 @@
 # Applied Computer Graphics 4860-1084
 
+[![Build_Win](https://github.com/ACG-2022S/acg/actions/workflows/windows.yml/badge.svg)](https://github.com/ACG-2022S/acg/actions/workflows/windows.yml)
+[![Build_Linux](https://github.com/ACG-2022S/acg/actions/workflows/ubuntu.yml/badge.svg)](https://github.com/ACG-2022S/acg/actions/workflows/ubuntu.yml)
+
 Lecture at graduate school of information science and technology in the university of Tokyo, spring semester, 2022
 
 ITC-LMS (for Slack and GitHub Classroom invitaitons): 
 
 - https://itc-lms.ecc.u-tokyo.ac.jp/lms/course?idnumber=20224860-10840F01
 
-| OS | build status |
-| --- | --- |
-| Windows | [![Build_Win](https://github.com/ACG-2022S/acg/actions/workflows/windows.yml/badge.svg)](https://github.com/ACG-2022S/acg/actions/workflows/windows.yml) |
-| Linux | [![Build_Linux](https://github.com/ACG-2022S/acg/actions/workflows/ubuntu.yml/badge.svg)](https://github.com/ACG-2022S/acg/actions/workflows/ubuntu.yml) |
 
 ## Instructor
 
@@ -42,7 +41,7 @@ Topics:
 | Day | Topic | Assignment | Slide |
 |:----|:---|:---|:---|
 |(1)<br>Apr. 11| **Introduction**<br>graphics pipeline |  | [[3]](http://nobuyuki-umetani.com/acg2022s/graphics_pipeline.pdf) |
-|(2)<br>Apr. 18| **Coordinate transfrormation**<br>barycentric transformation | [task00](task00) | [[4] ](http://nobuyuki-umetani.com/acg2022s/barycentric_coordinate.pdf) |
+|(2)<br>Apr. 18| **Coordinate transfrormation**<br>barycentric transformation | [task00](task00) | [[4] ](http://nobuyuki-umetani.com/acg2022s/barycentric_coordinate.pdf), [[5]](http://nobuyuki-umetani.com/acg2022s/transformation.pdf) |
 |(3)<br>Apr. 25| Character deformation Ⅰ | [task02](task02) | - |
 |(4)<br>May 2| Ray Casting | task03 | - |
 |(5)<br>May 9| Rasterization | task04 | - |
