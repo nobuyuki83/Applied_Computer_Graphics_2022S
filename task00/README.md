@@ -8,7 +8,7 @@
 
 ![preview](task0_preview.png)
 
-Follow the instruction below to build the attached C++ code. This code will display an OpenGL window showing a triangle.  Take a screenshot of the window (it should look like the image above) and paste it below.  By putting the imae under the directory `cga-<username>/task0` and edit this markdown document. 
+Follow the instruction below to build the attached C++ code. This code will display an OpenGL window showing a triangle.  Take a screenshot of the window (it should look like the image above) and paste it below.  By putting the imae under the directory `cga-<username>/task00` and edit this markdown document. 
 
 === (paste the screenshot image here`![](image file name)` ) === 
 
@@ -92,15 +92,15 @@ Update this markdown document by editing `acg-<username>/task00/README.md` .Plea
 
 ### Submit
 
-Finally, you submit the document by pushing to the `task0` branch of the remote repository. 
+Finally, you submit the document by pushing to the `task00` branch of the remote repository. 
 
 ```bash
 cd acg-<username>    # go to the top of the repository
 git status  # check the changes
 git add .   # stage the changes
 git status  # check the staged changes
-git commit -m "task0 finished"   # the comment can be anything
-git push --set-upstream origin task0  # up date the task0 branch of the remote repository
+git commit -m "task00 finished"   # the comment can be anything
+git push --set-upstream origin task00  # up date the task0 branch of the remote repository
 ```
 
 got to the GitHub webpage `https://github.com/ACG-2022S/acg-<username>` . If everything looks good on this page, make a pull request. 
