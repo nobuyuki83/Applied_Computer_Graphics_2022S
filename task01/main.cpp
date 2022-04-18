@@ -71,14 +71,14 @@ int main() {
     // set model view matrix
     ::glMatrixMode(GL_MODELVIEW);
     ::glLoadIdentity();
-    ::glMultTransposeMatrixd(modelview_matrix.data());
+    ::glMultMatrixd(modelview_matrix.transpose().eval().data());
     // set projection matrix
     ::glMatrixMode(GL_PROJECTION);
     ::glLoadIdentity();
     {
       Eigen::Matrix<double,4,4,Eigen::RowMajor> m;
       m << 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, -1, 0, 0, 0, 0, 1;
-      ::glMultTransposeMatrixd((m*projection_matrix).eval().data());
+      ::glMultMatrixd((m*projection_matrix).transpose().eval().data());
     }
     //
     ::glDisable(GL_LIGHTING);

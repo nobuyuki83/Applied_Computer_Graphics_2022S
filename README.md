@@ -1,5 +1,10 @@
 # Applied Computer Graphics 4860-1084
 
+| OS | build status |
+| --- | --- |
+| Windows | [![Build_Win](https://github.com/ACG-2022S/acg/actions/workflows/windows.yml/badge.svg)](https://github.com/ACG-2022S/acg/actions/workflows/windows.yml) |
+| Linux | [![Build_Linux](https://github.com/ACG-2022S/acg/actions/workflows/ubuntu.yml/badge.svg)](https://github.com/ACG-2022S/acg/actions/workflows/ubuntu.yml) |
+
 Lecture at graduate school of information science and technology in the university of Tokyo, spring semester, 2022
 
 ITC-LMS (for Slack and GitHub Classroom invitaitons): 
