@@ -38,7 +38,7 @@ Topics:
 | Day | Topic | Assignment | Slide |
 |:----|:---|:---|:---|
 |(1)<br>Apr. 11| **Introduction**<br>graphics pipeline |  | [[3]](http://nobuyuki-umetani.com/acg2022s/graphics_pipeline.pdf) |
-|(2)<br>Apr. 18| Affine transfrormation | [task0](task0) | - |
+|(2)<br>Apr. 18| **Coordinate transfrormation**<br>barycentric transformation | [task0](task_00) | [[4] ](http://nobuyuki-umetani.com/acg2022s/barycentric_coordinate.pdf) |
 |(3)<br>Apr. 25| Character deformation Ⅰ | [task2](task2) | - |
 |(4)<br>May 2| Ray Casting | task3 | - |
 |(5)<br>May 9| Rasterization | task4 | - |
@@ -76,7 +76,7 @@ There are many small programming assignments. To do the assignments, you need to
 
 ### Tasks
 
-- [task0](task0): build C++ Program with CMake
+- [task0](task_00): build C++ Program with CMake
 - [task1](task1): Affine transformation
 - [task2](task2): articulated rigid bones
 - [task3](task3): ray casting 
@@ -93,8 +93,9 @@ There are many small programming assignments. To do the assignments, you need to
 
 - [[1] C++ programming](http://nobuyuki-umetani.com/acg2022s/cpp.pdf)
 - [[2] Git+GitHub](http://nobuyuki-umetani.com/acg2022s/git.pdf)
-
-- [[3] Graphics Pipeline](http://nobuyuki-umetani.com/acg2022s/graphics_pipeline.pdf)
+- [[3] Graphics pipeline](http://nobuyuki-umetani.com/acg2022s/graphics_pipeline.pdf)
+- [[4] Barycentric coordinate](http://nobuyuki-umetani.com/acg2022s/barycentric_coordinate.pdf)
+- [[5] Coordinate transformation](http://nobuyuki-umetani.com/acg2022s/transformation.pdf)
 
 ## Reading Material
 - [Introduction to Computer Graphics by Cem Yuksel](https://www.youtube.com/watch?v=vLSphLtKQ0o&list=PLplnkTzzqsZTfYh4UbhLGpI5kGd5oW_Hh)
