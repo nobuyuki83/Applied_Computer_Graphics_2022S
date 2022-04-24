@@ -8,7 +8,7 @@
 
 ## Before Doing Assignment
 
-If you have not done the [task0](../task01), do it first to set up the C++ graphics developtment environment.
+If you have not done the [task00](../task00), do it first to set up the C++ graphics developtment environment.
 
 Follow [this document](../doc/submit.md) to submit the assignment, In a nutshell, before doing the assignment,  
 - make sure you synchronized the `main ` branch of your local repository  to that of remote repository.
