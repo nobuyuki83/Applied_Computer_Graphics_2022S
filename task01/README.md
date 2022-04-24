@@ -31,9 +31,9 @@ Now you are ready to go!
 
 ## Problem 2
 
-Modify `main.cpp` to define the Homographic transformation that maps image corners to the  red points. 
+Write some code (about 20 lines) around `line #33` in `main.cpp` to define the Homographic transformation that maps image corners to the  red points. 
 
-Save the screenshot image overwriting `task1/problem2.png`
+Save the screenshot image overwriting `task01/problem2.png`
 
 ![problem2](problem2.png)
 
