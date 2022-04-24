@@ -12,11 +12,10 @@ ELSE()
 ENDIF()
 
 #############################
-
 # set project name
-project(task01)
 
-# define a macro to get absolute path in C++
+project(task2)
+
 add_definitions(-DSOURCE_DIR="${PROJECT_SOURCE_DIR}")
 
 #############################
@@ -38,12 +37,10 @@ include(${CMAKE_CURRENT_SOURCE_DIR}/../external/FindEigen3.cmake) # call script 
 # include, build, & link
 
 include_directories(${PROJECT_NAME}
-  ${CMAKE_CURRENT_SOURCE_DIR}/../external
   ${CMAKE_CURRENT_SOURCE_DIR}/../external/delfem2/include
 )
 
 add_executable(${PROJECT_NAME}
-#  main_ans.cpp
   main.cpp
 )
 

@@ -9,52 +9,88 @@
 #include "delfem2/eigen_opengl/funcs.h"
 #include "delfem2/opengl/old/funcs.h"
 
-class RigidBone {
- public:
-  void Initialize() {
-    delfem2::eigen::ReadTriangleMeshObj(
-        V,F,
-        std::string(SOURCE_DIR)+"/../assets/joint_zz5.obj");
-    std::cout << V.rows() << " " << V.cols() << std::endl;
-    std::cout << F.rows() << " " << F.cols() << std::endl;
-  }
-  void Draw() const {
-    ::glDisable(GL_LIGHTING);
-    ::glColor3fv( color.data() );  // specify color
-    delfem2::eigen_opengl::DrawMeshTri3_Edge(V,F);
-    ::glColor3d(0.8, 0.8, 0.8);
-    ::glEnable(GL_LIGHTING);
-    delfem2::eigen_opengl::DrawMeshTri3_FaceFlatNorm(V,F);
-  }
- public:
-  Eigen::Matrix<double, 4, 4, Eigen::RowMajor> affine_matrix;   // affine matrix
-  Eigen::Matrix<double, -1, 3, Eigen::RowMajor> V;  // vertex's coordinates
-  Eigen::Matrix<unsigned int, -1, 3, Eigen::RowMajor> F;  // triangle's vertex
-  std::array<float,3> color{0.f, 0.f, 0.f};
-};
-
 int main() {
 
-  RigidBone bone;
-  bone.Initialize();
+  Eigen::Matrix<double, -1, 3, Eigen::RowMajor> V0;  // same as Eigen::MatrixXd
+  Eigen::Matrix<unsigned int, -1, 3, Eigen::RowMajor> F0;  // same as Eigen::MatrixXui
+  delfem2::eigen::ReadTriangleMeshObj<double>(  // read mesh in obj format
+      V0, F0,
+      std::string(SOURCE_DIR) + "/../assets/bunny.obj");
 
-  delfem2::glfw::CViewer3 viewer;
-  viewer.window_title = "task2";
-  if ( !glfwInit() ) { exit(EXIT_FAILURE); }
+  /*
+   * Problem 1: scale & translate the vertex coordinates `V0`
+   * Make the axis aligned bounding box's center located at the origin
+   * the code is probably up to 5 lines
+   */
+
+  Eigen::Matrix<double,4,4,Eigen::RowMajor> modelview_matrix;
+  modelview_matrix <<
+  1, 0, 0, 0,
+  0, 1, 0, 0,
+  0, 0, 1, 0,
+  0, 0, 0, 1;
+
+  /*
+   * Problem 2: rotate the model 90 degree in x-axis
+   * edit `modelview_matrix`
+   * the code is probably up to 5 lines
+   */
+
+  Eigen::Matrix<double,4,4,Eigen::RowMajor> projection_matrix;
+  projection_matrix <<
+  1, 0, 0, 0,
+  0, 1, 0, 0,
+  0, 0, 1, 0,
+  0, 0, 0, 1;
+
+  /*
+   * Problem 3: view the model from (0, 0, 10) with 50 mm lens.
+   * edit 'modelview_matrix' and 'projection matrix'
+   * the code is probably up to 5 lines
+   */
+
+  if (!glfwInit()) { exit(EXIT_FAILURE); }
   ::glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, 2);
   ::glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 1);
-  viewer.OpenWindow();
+  GLFWwindow *window = ::glfwCreateWindow(
+      500, 500, "task1",
+      nullptr, nullptr);
+  if (!window) { // exit if failed to create window
+    ::glfwTerminate();
+    exit(EXIT_FAILURE);
+  }
+  ::glfwMakeContextCurrent(window); // working on this window
   delfem2::opengl::setSomeLighting();
   //
-  while ( !::glfwWindowShouldClose(viewer.window) ) {
-    viewer.DrawBegin_oldGL();
+  ::glClearColor(1, 1, 1, 1);
+  ::glEnable(GL_DEPTH_TEST);
+  ::glEnable(GL_POLYGON_OFFSET_FILL);
+  ::glPolygonOffset(1.1f, 4.0f);
+  while (!::glfwWindowShouldClose(window)) {
+    ::glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
+    // set model view matrix
+    ::glMatrixMode(GL_MODELVIEW);
+    ::glLoadIdentity();
+    ::glMultMatrixd(modelview_matrix.transpose().eval().data());
+    // set projection matrix
+    ::glMatrixMode(GL_PROJECTION);
+    ::glLoadIdentity();
+    {
+      Eigen::Matrix<double,4,4,Eigen::RowMajor> m;
+      m << 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, -1, 0, 0, 0, 0, 1;
+      ::glMultMatrixd((m*projection_matrix).transpose().eval().data());
+    }
     //
-    bone.Draw();
+    ::glDisable(GL_LIGHTING);
+    ::glColor3d(0, 0, 0);
+    delfem2::eigen_opengl::DrawMeshTri3_Edge(V0, F0);
+    ::glEnable(GL_LIGHTING);
+    delfem2::eigen_opengl::DrawMeshTri3_FaceFlatNorm(V0, F0);
     //
-    ::glfwSwapBuffers(viewer.window);
+    ::glfwSwapBuffers(window);
     ::glfwPollEvents();
   }
-  ::glfwDestroyWindow(viewer.window);
+  ::glfwDestroyWindow(window);
   ::glfwTerminate();
   exit(EXIT_SUCCESS);
 }

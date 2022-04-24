@@ -1,21 +1,21 @@
-# Task1: View Transformation
+# Task1: 2D Homography Transformation 
 
 **This assignment is still under construction** 
 
-![preview](../doc/mole.png)
+![preview](preview.png)
 
-**Deadline: Apr 21th(Thu) at 15:00pm**
+**Deadline: Apr 28th(Thu) at 15:00pm**
 
 ----
 
 ## Before Doing Assignment
 
-If you have not done the [task0](../task0), do it first to set up the C++ graphics developtment environment.
+If you have not done the [task0](../task01), do it first to set up the C++ graphics developtment environment.
 
 Follow [this document](../doc/submit.md) to submit the assignment, In a nutshell, before doing the assignment,  
 - make sure you synchronized the `main ` branch of your local repository  to that of remote repository.
-- make sure you created branch `task1` from `main` branch.
-- make sure you are currently in the `task1` branch (use `git branch -a` command).
+- make sure you created branch `task01` from `main` branch.
+- make sure you are currently in the `task01` branch (use `git branch -a` command).
 
 Now you are ready to go!
 
@@ -26,28 +26,18 @@ Now you are ready to go!
 1. Build the code using cmake
 2. Run the code
 3. Take a screenshot image (looks like image at the top)
-4. Save the screenshot image overwriting `task1/problem1.png`
+4. Save the screenshot image overwriting `task01/problem1.png`
  
 ![problem1](problem1.png)
 
 
-
 ## Problem 2
 
-Modify `main.cpp` to scale and translate the vertex coordinate such that the center of the axis-aligned bounding box is at the origin.
+Modify `main.cpp` to define the Homographic transformation that maps image corners to the  red points. 
 
 Save the screenshot image overwriting `task1/problem2.png`
 
 ![problem2](problem2.png)
-
-
-### Problem 3
-
-Modify `main.cpp` to define 4x4 projection matrix.
-
-projection is done with `50mm` lens.
-
-![problem3](problem3.png)
 
 
 ## After Doing the Assignment

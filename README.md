@@ -42,7 +42,7 @@ Topics:
 |:----|:---|:---|:---|
 |(1)<br>Apr. 11| **Introduction**<br>graphics pipeline |  | [[3]](http://nobuyuki-umetani.com/acg2022s/graphics_pipeline.pdf) |
 |(2)<br>Apr. 18| **Coordinate transfrormation**<br>barycentric transformation | [task00](task00) | [[4] ](http://nobuyuki-umetani.com/acg2022s/barycentric_coordinate.pdf), [[5]](http://nobuyuki-umetani.com/acg2022s/transformation.pdf) |
-|(3)<br>Apr. 25| Character deformation Ⅰ | [task02](task02) | - |
+|(3)<br>Apr. 25| **Coordinate transformation2** | [task01](task01) | - |
 |(4)<br>May 2| Ray Casting | task03 | - |
 |(5)<br>May 9| Rasterization | task04 | - |
 |(6)<br>May 16| Optimization Ⅰ | task05 | - |
@@ -80,7 +80,7 @@ There are many small programming assignments. To do the assignments, you need to
 ### Tasks
 
 - [task00](task00): build C++ Program with CMake
-- [task01](task01): Affine transformation
+- [task01](task01): 2D Homography Transformation
 - [task02](task02): articulated rigid bones
 - [task03](task03): ray casting 
 - [task04](task04): rastering

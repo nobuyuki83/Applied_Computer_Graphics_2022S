@@ -12,10 +12,11 @@ ELSE()
 ENDIF()
 
 #############################
+
 # set project name
+project(task1)
 
-project(task2)
-
+# define a macro to get absolute path in C++
 add_definitions(-DSOURCE_DIR="${PROJECT_SOURCE_DIR}")
 
 #############################
@@ -41,6 +42,7 @@ include_directories(${PROJECT_NAME}
 )
 
 add_executable(${PROJECT_NAME}
+#  main_ans.cpp
   main.cpp
 )
 
