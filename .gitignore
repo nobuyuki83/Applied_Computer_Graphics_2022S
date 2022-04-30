@@ -34,6 +34,9 @@
 .vs
 .vscode
 CMakeSettings.json
+CMakeFiles
+cmake_install.cmake
+Makefile
 out
 
 # CLion
@@ -47,4 +50,7 @@ external/eigenlib
 *.DS_Store  
 build
 
+!assets/armadillo1.obj
+
 */main_ans.cpp
+*/shader_ans.vert

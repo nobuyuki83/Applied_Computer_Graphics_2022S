@@ -39,7 +39,7 @@ int main() {
   bone.Initialize();
 
   delfem2::glfw::CViewer3 viewer;
-  viewer.window_title = "task2";
+  viewer.window_title = "task02";
   if ( !glfwInit() ) { exit(EXIT_FAILURE); }
   ::glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, 2);
   ::glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 1);

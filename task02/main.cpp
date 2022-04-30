@@ -1,92 +1,67 @@
-#include <cstdio>
+
 #include <cstdlib>
+#include <glad/glad.h>
 #define GL_SILENCE_DEPRECATION
 #include <GLFW/glfw3.h>
-#include <Eigen/Dense>
 
-#include "delfem2/glfw/viewer3.h"
-#include "delfem2/eigen/msh_io.h"
-#include "delfem2/eigen_opengl/funcs.h"
-#include "delfem2/opengl/old/funcs.h"
+#define STB_IMAGE_IMPLEMENTATION
+#include "stb_image.h"
+#include "delfem2/file.h"
+#include "delfem2/msh_io_obj.h"
+#include "delfem2/mshmisc.h"
+#include "delfem2/opengl/funcs.h"
+#include "delfem2/opengl/old/mshuni.h"
 
 int main() {
 
-  Eigen::Matrix<double, -1, 3, Eigen::RowMajor> V0;  // same as Eigen::MatrixXd
-  Eigen::Matrix<unsigned int, -1, 3, Eigen::RowMajor> F0;  // same as Eigen::MatrixXui
-  delfem2::eigen::ReadTriangleMeshObj<double>(  // read mesh in obj format
-      V0, F0,
-      std::string(SOURCE_DIR) + "/../assets/bunny.obj");
-
-  /*
-   * Problem 1: scale & translate the vertex coordinates `V0`
-   * Make the axis aligned bounding box's center located at the origin
-   * the code is probably up to 5 lines
-   */
-
-  Eigen::Matrix<double,4,4,Eigen::RowMajor> modelview_matrix;
-  modelview_matrix <<
-  1, 0, 0, 0,
-  0, 1, 0, 0,
-  0, 0, 1, 0,
-  0, 0, 0, 1;
-
-  /*
-   * Problem 2: rotate the model 90 degree in x-axis
-   * edit `modelview_matrix`
-   * the code is probably up to 5 lines
-   */
-
-  Eigen::Matrix<double,4,4,Eigen::RowMajor> projection_matrix;
-  projection_matrix <<
-  1, 0, 0, 0,
-  0, 1, 0, 0,
-  0, 0, 1, 0,
-  0, 0, 0, 1;
-
-  /*
-   * Problem 3: view the model from (0, 0, 10) with 50 mm lens.
-   * edit 'modelview_matrix' and 'projection matrix'
-   * the code is probably up to 5 lines
-   */
+  std::vector<double> vtx_xyz;
+  std::vector<unsigned int> tri_vtx;
+  delfem2::Read_Obj3(
+      vtx_xyz, tri_vtx,
+      std::string(SOURCE_DIR)+"/../assets/armadillo1.obj");
+  std::cout << "number of vertex: " << vtx_xyz.size() / 3 << std::endl;
+  std::cout << "number of triangles: " << tri_vtx.size() / 3 << std::endl;
 
   if (!glfwInit()) { exit(EXIT_FAILURE); }
+  // set OpenGL's version (note: ver. 2.1 is very old, but I chose because it's simple)
   ::glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, 2);
   ::glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 1);
-  GLFWwindow *window = ::glfwCreateWindow(
-      500, 500, "task1",
-      nullptr, nullptr);
+  GLFWwindow *window = ::glfwCreateWindow(500, 500, "task02", nullptr, nullptr);
   if (!window) { // exit if failed to create window
     ::glfwTerminate();
     exit(EXIT_FAILURE);
   }
-  ::glfwMakeContextCurrent(window); // working on this window
-  delfem2::opengl::setSomeLighting();
+  ::glfwMakeContextCurrent(window); // working on this window below
   //
-  ::glClearColor(1, 1, 1, 1);
+  if (!gladLoadGL()) {     // glad: load all OpenGL function pointers
+    printf("Something went wrong in loading OpenGL functions!\n");
+    exit(-1);
+  }
+
+  int shaderProgram;
+  {
+    std::string vrt_path = std::string(SOURCE_DIR) + "/shader.vert";
+    std::string frg_path = std::string(SOURCE_DIR) + "/shader.frag";
+    std::string vrt = delfem2::LoadFile(vrt_path);
+    std::string frg = delfem2::LoadFile(frg_path);
+    shaderProgram = delfem2::opengl::setUpGLSL(vrt, frg);
+  }
+
+  GLint iloc = glGetUniformLocation(shaderProgram, "cam_z_pos");
+
+  ::glClearColor(1, 1, 1, 1);  // set the color to fill the frame buffer when glClear is called.
   ::glEnable(GL_DEPTH_TEST);
-  ::glEnable(GL_POLYGON_OFFSET_FILL);
-  ::glPolygonOffset(1.1f, 4.0f);
   while (!::glfwWindowShouldClose(window)) {
     ::glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
-    // set model view matrix
-    ::glMatrixMode(GL_MODELVIEW);
-    ::glLoadIdentity();
-    ::glMultMatrixd(modelview_matrix.transpose().eval().data());
     // set projection matrix
-    ::glMatrixMode(GL_PROJECTION);
-    ::glLoadIdentity();
-    {
-      Eigen::Matrix<double,4,4,Eigen::RowMajor> m;
-      m << 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, -1, 0, 0, 0, 0, 1;
-      ::glMultMatrixd((m*projection_matrix).transpose().eval().data());
-    }
-    //
-    ::glDisable(GL_LIGHTING);
-    ::glColor3d(0, 0, 0);
-    delfem2::eigen_opengl::DrawMeshTri3_Edge(V0, F0);
-    ::glEnable(GL_LIGHTING);
-    delfem2::eigen_opengl::DrawMeshTri3_FaceFlatNorm(V0, F0);
-    //
+
+    const double time = glfwGetTime();
+    const double cam_z_pos = sin(time);
+    glUniform1f(iloc,float(cam_z_pos));
+
+    ::glUseProgram(shaderProgram);
+    delfem2::opengl::DrawMeshTri3D_FaceNorm(vtx_xyz, tri_vtx);
+
     ::glfwSwapBuffers(window);
     ::glfwPollEvents();
   }

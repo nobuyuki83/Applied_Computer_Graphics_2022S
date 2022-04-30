@@ -14,7 +14,7 @@ ENDIF()
 #############################
 
 # set project name
-project(task02)
+project(task1)
 
 # define a macro to get absolute path in C++
 add_definitions(-DSOURCE_DIR="${PROJECT_SOURCE_DIR}")
@@ -29,25 +29,27 @@ find_package(OpenGL REQUIRED)
 set(CMAKE_PREFIX_PATH ${CMAKE_CURRENT_SOURCE_DIR}/../external/glfwlib)
 find_package(glfw3 REQUIRED)
 
+# use eigen
+# find_package(Eigen3 REQUIRED) # works only for installation by package managers
+FILE(GLOB EIGEN3_ROOT ${CMAKE_CURRENT_SOURCE_DIR}/../external/eigen*) # find downloaded eigen directories in 3rd_party
+include(${CMAKE_CURRENT_SOURCE_DIR}/../external/FindEigen3.cmake) # call script to find eigen3
+
 ########################
 # include, build, & link
 
 include_directories(${PROJECT_NAME}
-  ${CMAKE_CURRENT_SOURCE_DIR}/../external
   ${CMAKE_CURRENT_SOURCE_DIR}/../external/delfem2/include
-  ${CMAKE_CURRENT_SOURCE_DIR}/../external/glad3/include
 )
 
 add_executable(${PROJECT_NAME}
 #  main_ans.cpp
   main.cpp
-  ${CMAKE_CURRENT_SOURCE_DIR}/../external/glad3//include/glad/glad.h
-  ${CMAKE_CURRENT_SOURCE_DIR}/../external/glad3/src/glad.c
 )
 
 target_link_libraries(${PROJECT_NAME}
   OpenGL::GL
   glfw
+  Eigen3::Eigen
 )
 
 #############################
@@ -55,4 +57,8 @@ target_link_libraries(${PROJECT_NAME}
 
 GET_TARGET_PROPERTY(GLFW_INCLUDE_DIR
   glfw INTERFACE_INCLUDE_DIRECTORIES)
-message(STATUS "task02 glfw include directory: ${GLFW_INCLUDE_DIR}")
+message(STATUS "glfw include directory: ${GLFW_INCLUDE_DIR}")
+
+GET_TARGET_PROPERTY(EIGEN3_EIGEN_INCLUDE_DIR
+  Eigen3::Eigen INTERFACE_INCLUDE_DIRECTORIES)
+message(STATUS "eigen3 include directory: ${EIGEN3_EIGEN_INCLUDE_DIR}")
