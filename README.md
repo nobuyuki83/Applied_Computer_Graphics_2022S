@@ -43,8 +43,8 @@ Topics:
 |(1)<br>Apr. 11| **Introduction**<br>graphics pipeline |  | [[3]](http://nobuyuki-umetani.com/acg2022s/graphics_pipeline.pdf) |
 |(2)<br>Apr. 18| **Coordinate transfrormation**<br>barycentric transformation | [task00](task00) | [[4] ](http://nobuyuki-umetani.com/acg2022s/barycentric_coordinate.pdf), [[5]](http://nobuyuki-umetani.com/acg2022s/transformation.pdf) |
 |(3)<br>Apr. 25| **Coordinate transformation2** | [task01](task01) | - |
-|(4)<br>May 2| Ray Casting | task03 | - |
-|(5)<br>May 9| Rasterization | task04 | - |
+|(5)<br>May 2| **Rasterization** | [task02](task02) | - |
+|(4)<br>May 9| Ray Casting | task03 | - |
 |(6)<br>May 16| Optimization Ⅰ | task05 | - |
 |(7)<br>May 23| Optimization Ⅱ | task06 | - |
 |(8)<br>June 6|  Character deformation Ⅱ | task07 | - |
@@ -53,8 +53,6 @@ Topics:
 |(11)<br>June 27| Guest lecture by Dr. Ryoichi Ando | - | - |
 |(12)<br>July 4| Grid-based Fluid Ⅰ | task10 | - |
 |(13)<br>July 11| Grid-based Fluid Ⅱ | - | - |
-
-
 
 
 ## Grading
@@ -75,15 +73,15 @@ There are many small programming assignments. To do the assignments, you need to
 - Do the assignment by yourself. Don't share the assignments with others.
 - Don't post the answers of the assignment on Slack 
 - Late submission of an assignment is subject to grade deduction
-- Score each assignemnt will not be open soon (instructer needs to adjust weight of the score later)
+- Score each assignment will not be open soon (instructor needs to adjust weight of the score later)
 
 ### Tasks
 
 - [task00](task00): build C++ Program with CMake
 - [task01](task01): 2D Homography Transformation
-- [task02](task02): articulated rigid bones
+- [task02](task02): GLSL Vertex Shader (Fisheye Lens)
 - [task03](task03): ray casting 
-- [task04](task04): rastering
+- [task04](task04): rasterization
 - [task05](task05): navigation mesh
 - [task06](task06): laplacian mesh deformation
 - [task07](task07): inverse kinematics
