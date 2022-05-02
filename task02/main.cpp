@@ -42,25 +42,23 @@ int main() {
   {
     std::string vrt_path = std::string(SOURCE_DIR) + "/shader.vert";
     std::string frg_path = std::string(SOURCE_DIR) + "/shader.frag";
-    std::string vrt = delfem2::LoadFile(vrt_path);
-    std::string frg = delfem2::LoadFile(frg_path);
-    shaderProgram = delfem2::opengl::setUpGLSL(vrt, frg);
+    std::string vrt = delfem2::LoadFile(vrt_path); // read source code of vertex shader program
+    std::string frg = delfem2::LoadFile(frg_path); // read source code of fragment shader program
+    shaderProgram = delfem2::opengl::setUpGLSL(vrt, frg); // compile the shader on GPU
   }
 
-  GLint iloc = glGetUniformLocation(shaderProgram, "cam_z_pos");
+  GLint iloc = glGetUniformLocation(shaderProgram, "cam_z_pos");  // location of variable in the shader program
 
   ::glClearColor(1, 1, 1, 1);  // set the color to fill the frame buffer when glClear is called.
   ::glEnable(GL_DEPTH_TEST);
   while (!::glfwWindowShouldClose(window)) {
     ::glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
-    // set projection matrix
-
     const double time = glfwGetTime();
-    const double cam_z_pos = sin(time);
-    glUniform1f(iloc,float(cam_z_pos));
+    const double cam_z_pos = sin(time);  // variable on CPU
+    glUniform1f(iloc,float(cam_z_pos));  // send variable to GPU
 
-    ::glUseProgram(shaderProgram);
-    delfem2::opengl::DrawMeshTri3D_FaceNorm(vtx_xyz, tri_vtx);
+    ::glUseProgram(shaderProgram);  // use the shapder program from here
+    delfem2::opengl::DrawMeshTri3D_FaceNorm(vtx_xyz, tri_vtx);  // draw triangle mesh
 
     ::glfwSwapBuffers(window);
     ::glfwPollEvents();

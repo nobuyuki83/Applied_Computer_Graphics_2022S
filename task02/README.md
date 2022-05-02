@@ -31,8 +31,9 @@ Now you are ready to go!
 
 ## Problem 2
 
-Write some code (about 5 ~ 7  lines) around `line #25` in `shaer.vert` to define the coordinate transformation of 
-equidistant fisheye lens.   
+Write some code (about 5 ~ 7  lines) around `line #25` in `shader.vert` 
+to define the coordinate transformation of equidistant fisheye lens.
+Read the instruction in the `shader.vert` for more information.
 
 Save the screenshot image overwriting `task02/problem2.png`
 
