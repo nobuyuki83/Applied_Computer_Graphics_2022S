@@ -43,7 +43,7 @@ Topics:
 |(1)<br>Apr. 11| **Introduction**<br>graphics pipeline |  | [[3]](http://nobuyuki-umetani.com/acg2022s/graphics_pipeline.pdf) |
 |(2)<br>Apr. 18| **Coordinate transfrormation**<br>barycentric transformation | [task00](task00) | [[4] ](http://nobuyuki-umetani.com/acg2022s/barycentric_coordinate.pdf), [[5]](http://nobuyuki-umetani.com/acg2022s/transformation.pdf) |
 |(3)<br>Apr. 25| **Coordinate transformation2** | [task01](task01) | - |
-|(5)<br>May 2| **Rasterization** | [task02](task02) | - |
+|(5)<br>May 2| **Rasterization** | [task02](task02) |  [[6]](http://nobuyuki-umetani.com/acg2022s/rasterization.pdf) |
 |(4)<br>May 9| Ray Casting | task03 | - |
 |(6)<br>May 16| Optimization Ⅰ | task05 | - |
 |(7)<br>May 23| Optimization Ⅱ | task06 | - |
@@ -97,6 +97,7 @@ There are many small programming assignments. To do the assignments, you need to
 - [[3] Graphics pipeline](http://nobuyuki-umetani.com/acg2022s/graphics_pipeline.pdf)
 - [[4] Barycentric coordinate](http://nobuyuki-umetani.com/acg2022s/barycentric_coordinate.pdf)
 - [[5] Coordinate transformation](http://nobuyuki-umetani.com/acg2022s/transformation.pdf)
+- [[6] Rasterization](http://nobuyuki-umetani.com/acg2022s/rasterization.pdf)
 
 ## Reading Material
 - [Introduction to Computer Graphics by Cem Yuksel](https://www.youtube.com/watch?v=vLSphLtKQ0o&list=PLplnkTzzqsZTfYh4UbhLGpI5kGd5oW_Hh)
