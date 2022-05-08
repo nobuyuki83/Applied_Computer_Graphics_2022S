@@ -40,7 +40,7 @@ int main() {
 
   int shaderProgram;
   {
-    std::string vrt_path = std::string(SOURCE_DIR) + "/shader.vert";
+    std::string vrt_path = std::string(SOURCE_DIR) + "/shader_ans.vert";
     std::string frg_path = std::string(SOURCE_DIR) + "/shader.frag";
     std::string vrt = delfem2::LoadFile(vrt_path); // read source code of vertex shader program
     std::string frg = delfem2::LoadFile(frg_path); // read source code of fragment shader program

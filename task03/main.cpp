@@ -1,60 +1,61 @@
-#include <cstdio>
+
 #include <cstdlib>
+#include <glad/glad.h>
 #define GL_SILENCE_DEPRECATION
 #include <GLFW/glfw3.h>
-#include <Eigen/Dense>
 
-#include "delfem2/glfw/viewer3.h"
-#include "delfem2/eigen/msh_io.h"
-#include "delfem2/eigen_opengl/funcs.h"
-#include "delfem2/opengl/old/funcs.h"
-
-class RigidBone {
- public:
-  void Initialize() {
-    delfem2::eigen::ReadTriangleMeshObj(
-        V,F,
-        std::string(SOURCE_DIR)+"/../assets/joint_zz5.obj");
-    std::cout << V.rows() << " " << V.cols() << std::endl;
-    std::cout << F.rows() << " " << F.cols() << std::endl;
-  }
-  void Draw() const {
-    ::glDisable(GL_LIGHTING);
-    ::glColor3fv( color.data() );  // specify color
-    delfem2::eigen_opengl::DrawMeshTri3_Edge(V,F);
-    ::glColor3d(0.8, 0.8, 0.8);
-    ::glEnable(GL_LIGHTING);
-    delfem2::eigen_opengl::DrawMeshTri3_FaceFlatNorm(V,F);
-  }
- public:
-  Eigen::Matrix<double, 4, 4, Eigen::RowMajor> affine_matrix;   // affine matrix
-  Eigen::Matrix<double, -1, 3, Eigen::RowMajor> V;  // vertex's coordinates
-  Eigen::Matrix<unsigned int, -1, 3, Eigen::RowMajor> F;  // triangle's vertex
-  std::array<float,3> color{0.f, 0.f, 0.f};
-};
+#include "delfem2/file.h"
+#include "delfem2/opengl/funcs.h"
 
 int main() {
-
-  RigidBone bone;
-  bone.Initialize();
-
-  delfem2::glfw::CViewer3 viewer;
-  viewer.window_title = "task02";
-  if ( !glfwInit() ) { exit(EXIT_FAILURE); }
+  if (!glfwInit()) { exit(EXIT_FAILURE); }
+  // set OpenGL's version (note: ver. 2.1 is very old, but I chose because it's simple)
   ::glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, 2);
   ::glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 1);
-  viewer.OpenWindow();
-  delfem2::opengl::setSomeLighting();
+  GLFWwindow *window = ::glfwCreateWindow(500, 500, "task03", nullptr, nullptr);
+  if (!window) { // exit if failed to create window
+    ::glfwTerminate();
+    exit(EXIT_FAILURE);
+  }
+  ::glfwMakeContextCurrent(window); // working on this window below
   //
-  while ( !::glfwWindowShouldClose(viewer.window) ) {
-    viewer.DrawBegin_oldGL();
-    //
-    bone.Draw();
-    //
-    ::glfwSwapBuffers(viewer.window);
+  if (!gladLoadGL()) {     // glad: load all OpenGL function pointers
+    printf("Something went wrong in loading OpenGL functions!\n");
+    exit(-1);
+  }
+
+  int shaderProgram;
+  {
+    std::string vrt_path = std::string(SOURCE_DIR) + "/shader.vert";
+    std::string frg_path = std::string(SOURCE_DIR) + "/shader.frag";
+    std::string vrt = delfem2::LoadFile(vrt_path); // read source code of vertex shader program
+    std::string frg = delfem2::LoadFile(frg_path); // read source code of fragment shader program
+    shaderProgram = delfem2::opengl::setUpGLSL(vrt, frg); // compile the shader on GPU
+  }
+
+  const GLint iloc = glGetUniformLocation(shaderProgram, "time");  // location of variable in the shader program
+
+  ::glClearColor(1, 1, 1, 1);  // set the color to fill the frame buffer when glClear is called.
+  ::glEnable(GL_DEPTH_TEST);
+  while (!::glfwWindowShouldClose(window)) {
+    ::glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
+    const auto time = static_cast<float>(glfwGetTime());
+    glUniform1f(iloc,time);
+    ::glMatrixMode(GL_PROJECTION);
+    ::glLoadIdentity(); // identity transformation
+    ::glMatrixMode(GL_MODELVIEW);
+    ::glLoadIdentity(); // identity transformation
+    ::glUseProgram(shaderProgram);  // use the shader program from here
+    ::glBegin(GL_QUADS); // draw a rectangle that cover the entire screen
+    ::glVertex2d(-1,-1);
+    ::glVertex2d(+1,-1);
+    ::glVertex2d(+1,+1);
+    ::glVertex2d(-1,+1);
+    ::glEnd();
+    ::glfwSwapBuffers(window);
     ::glfwPollEvents();
   }
-  ::glfwDestroyWindow(viewer.window);
+  ::glfwDestroyWindow(window);
   ::glfwTerminate();
   exit(EXIT_SUCCESS);
 }

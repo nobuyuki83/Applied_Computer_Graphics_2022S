@@ -5,7 +5,7 @@
 
 Lecture at graduate school of information science and technology in the university of Tokyo, spring semester, 2022
 
-ITC-LMS (for Slack and GitHub Classroom invitaitons): 
+ITC-LMS (for Slack and GitHub Classroom invitations): 
 
 - https://itc-lms.ecc.u-tokyo.ac.jp/lms/course?idnumber=20224860-10840F01
 
@@ -44,7 +44,7 @@ Topics:
 |(2)<br>Apr. 18| **Coordinate transfrormation**<br>barycentric transformation | [task00](task00) | [[4] ](http://nobuyuki-umetani.com/acg2022s/barycentric_coordinate.pdf), [[5]](http://nobuyuki-umetani.com/acg2022s/transformation.pdf) |
 |(3)<br>Apr. 25| **Coordinate transformation2** | [task01](task01) | - |
 |(5)<br>May 2| **Rasterization** | [task02](task02) |  [[6]](http://nobuyuki-umetani.com/acg2022s/rasterization.pdf) |
-|(4)<br>May 9| Ray Casting | task03 | - |
+|(4)<br>May 9| **Ray Casting** | [task03](task03) | - |
 |(6)<br>May 16| Optimization Ⅰ | task05 | - |
 |(7)<br>May 23| Optimization Ⅱ | task06 | - |
 |(8)<br>June 6|  Character deformation Ⅱ | task07 | - |
@@ -64,31 +64,33 @@ Topics:
 
 ## Assignemnts
 
-There are many small programming assignments. To do the assignments, you need to create your own copy of this repository through **GitHub Classroom**.  These assignements needs to be submitted using **pull request** functionality of the GitHub. Look at the following document. 
+There are many small programming assignments. 
+To do the assignments, you need to create your own copy of this repository through **GitHub Classroom**.  
+These assignments need to be submitted using **pull request** functionality of the GitHub. 
+Look at the following document. 
 
 [How to Submit the Assignments](doc/submit.md)
+
+| Task ID | Title | Thumbnail |
+|:---|:---|:---|
+| [task00](task00)| build C++ Program with CMake | <img src="task00/preview.png" width=100px> |
+| [task01](task01)| 2D Homography Transformation | <img src="task01/preview.png" width=100px> |
+| [task02](task02)| GLSL Vertex Shader (Fisheye Lens) | <img src="task02/preview.png" width=100px> |
+| [task03](task03)| GLSL Fragment Shader (Sphere Tracing / SDF) | <img src="task03/preview.png" width=100px> | 
+| [task04](task04)| rasterization | 
+| [task05](task05)| navigation mesh | 
+| [task06](task06)| laplacian mesh deformation |
+| [task07](task07)| inverse kinematics |
+| [task08](task08)| as-rigid-as possible mesh deformation |
+| [task09](task09)| subdivision surface |
+| [task11](task11)| FTDT simulation |
 
 ### Policy
 
 - Do the assignment by yourself. Don't share the assignments with others.
-- Don't post the answers of the assignment on Slack 
+- Don't post the answers of the assignment on Slack
 - Late submission of an assignment is subject to grade deduction
 - Score each assignment will not be open soon (instructor needs to adjust weight of the score later)
-
-### Tasks
-
-- [task00](task00): build C++ Program with CMake
-- [task01](task01): 2D Homography Transformation
-- [task02](task02): GLSL Vertex Shader (Fisheye Lens)
-- [task03](task03): ray casting 
-- [task04](task04): rasterization
-- [task05](task05): navigation mesh
-- [task06](task06): laplacian mesh deformation
-- [task07](task07): inverse kinematics
-- [task08](task08): as-rigid-as possible mesh deformation
-- [task09](task09): subdivision surface
-- [task11](task11): FTDT simulation
-
 
 ## Slides
 
