@@ -44,7 +44,7 @@ Topics:
 |(2)<br>Apr. 18| **Coordinate transfrormation**<br>barycentric transformation | [task00](task00) | [[4] ](http://nobuyuki-umetani.com/acg2022s/barycentric_coordinate.pdf), [[5]](http://nobuyuki-umetani.com/acg2022s/transformation.pdf) |
 |(3)<br>Apr. 25| **Coordinate transformation2** | [task01](task01) | - |
 |(5)<br>May 2| **Rasterization** | [task02](task02) |  [[6]](http://nobuyuki-umetani.com/acg2022s/rasterization.pdf) |
-|(4)<br>May 9| **Ray Casting** | [task03](task03) | - |
+|(4)<br>May 9| **Ray Casting** | [task03](task03) | [[7]](http://nobuyuki-umetani.com/acg2022s/implicit_modeling.pdf) |
 |(6)<br>May 16| Optimization Ⅰ | task05 | - |
 |(7)<br>May 23| Optimization Ⅱ | task06 | - |
 |(8)<br>June 6|  Character deformation Ⅱ | task07 | - |
@@ -100,6 +100,7 @@ Look at the following document.
 - [[4] Barycentric coordinate](http://nobuyuki-umetani.com/acg2022s/barycentric_coordinate.pdf)
 - [[5] Coordinate transformation](http://nobuyuki-umetani.com/acg2022s/transformation.pdf)
 - [[6] Rasterization](http://nobuyuki-umetani.com/acg2022s/rasterization.pdf)
+- [[6] Implicit Modeling](http://nobuyuki-umetani.com/acg2022s/implicit_modeling.pdf)
 
 ## Reading Material
 - [Introduction to Computer Graphics by Cem Yuksel](https://www.youtube.com/watch?v=vLSphLtKQ0o&list=PLplnkTzzqsZTfYh4UbhLGpI5kGd5oW_Hh)
