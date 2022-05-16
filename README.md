@@ -44,8 +44,8 @@ Topics:
 |(2)<br>Apr. 18| **Coordinate transfrormation**<br>barycentric transformation | [task00](task00) | [[4] ](http://nobuyuki-umetani.com/acg2022s/barycentric_coordinate.pdf), [[5]](http://nobuyuki-umetani.com/acg2022s/transformation.pdf) |
 |(3)<br>Apr. 25| **Coordinate transformation2** | [task01](task01) | - |
 |(5)<br>May 2| **Rasterization** | [task02](task02) |  [[6]](http://nobuyuki-umetani.com/acg2022s/rasterization.pdf) |
-|(4)<br>May 9| **Ray Casting** | [task03](task03) | [[7]](http://nobuyuki-umetani.com/acg2022s/implicit_modeling.pdf) |
-|(6)<br>May 16| Optimization Ⅰ | task05 | - |
+|(4)<br>May 9| **Ray Casting I** | [task03](task03) | [[7]](http://nobuyuki-umetani.com/acg2022s/implicit_modeling.pdf) |
+|(6)<br>May 16| **Ray Casting II** | [task04](task04) | - |
 |(7)<br>May 23| Optimization Ⅱ | task06 | - |
 |(8)<br>June 6|  Character deformation Ⅱ | task07 | - |
 |(9)<br>June 13| Variational mesh deformation | task08 | - |
@@ -77,7 +77,7 @@ Look at the following document.
 | [task01](task01)| 2D Homography Transformation | <img src="task01/preview.png" width=100px> |
 | [task02](task02)| GLSL Vertex Shader (Fisheye Lens) | <img src="task02/preview.png" width=100px> |
 | [task03](task03)| GLSL Fragment Shader (Sphere Tracing / SDF) | <img src="task03/preview.png" width=100px> | 
-| [task04](task04)| rasterization | 
+| [task04](task04)| Importance Sampling (Ambient Occlusion) |  <img src="task04/preview.png" width=100px> |
 | [task05](task05)| navigation mesh | 
 | [task06](task06)| laplacian mesh deformation |
 | [task07](task07)| inverse kinematics |
@@ -101,6 +101,7 @@ Look at the following document.
 - [[5] Coordinate transformation](http://nobuyuki-umetani.com/acg2022s/transformation.pdf)
 - [[6] Rasterization](http://nobuyuki-umetani.com/acg2022s/rasterization.pdf)
 - [[6] Implicit Modeling](http://nobuyuki-umetani.com/acg2022s/implicit_modeling.pdf)
+- [[7] Ray Casting](http://nobuyuki-umetani.com/acg2022s/raycasting.pdf)
 
 ## Reading Material
 - [Introduction to Computer Graphics by Cem Yuksel](https://www.youtube.com/watch?v=vLSphLtKQ0o&list=PLplnkTzzqsZTfYh4UbhLGpI5kGd5oW_Hh)

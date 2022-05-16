@@ -43,8 +43,15 @@ double SamplingHemisphere(
     const double nrm[3])  //
 {
   // below implement code to sample hemisphere with cosine weighted probabilistic distribution
+  // hint1: use polar coordinate (longitude and latitude).
+  // hint2: generate two float values using "dfm2::MyERand48<double>(Xi)". One will be longitude and another will be latitude
+  // hint3: for longitude use inverse sampling method to achieve cosine weighted sample.
+  // hint4: first assume z is the up in the polar coordinate, then rotate the sampled direction such that "z" will be up.
+  // write some codes below (5-10 lines)
+
 
   // below: naive implementation to "uniformly" sample hemisphere using "rejection sampling"
+  // to not be used for the "problem2" in the assignment
   for(int i=0;i<10;++i) { // 10 is a magic number
     const auto d0 = dfm2::MyERand48<double>(Xi);  // you can sample uniform distribution [0,1] with this function
     const auto d1 = dfm2::MyERand48<double>(Xi);
