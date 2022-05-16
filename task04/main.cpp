@@ -203,7 +203,6 @@ int main() {
     ::glClearColor(0.8, 1.0, 1.0, 1.0);
     ::glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
     glEnable(GL_TEXTURE_2D);
-    glActiveTexture(GL_TEXTURE0); // activate the texture unit first before binding texture
     glBindTexture(GL_TEXTURE_2D , tex.id_tex);
     tex.Draw_oldGL();
     viewer.SwapBuffers();

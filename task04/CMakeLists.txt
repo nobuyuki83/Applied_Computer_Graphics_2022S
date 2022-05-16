@@ -24,6 +24,9 @@ find_package(glfw3 REQUIRED)
 # opengl
 find_package(OpenGL REQUIRED)
 
+# thread
+find_package(Threads REQUIRED)
+
 #################################################
 
 include_directories(
@@ -35,7 +38,7 @@ add_executable(${PROJECT_NAME}
     )
 
 target_link_libraries(${PROJECT_NAME}
-    ${DFM2_LIBRARY}
     OpenGL::GL
     glfw
+    Threads::Threads
     )
