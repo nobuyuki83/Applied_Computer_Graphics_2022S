@@ -15,6 +15,14 @@ Follow [this document](../doc/submit.md) to submit the assignment, In a nutshell
 - make sure you created branch `task06` from `main` branch.
 - make sure you are currently in the `task06` branch (use `git branch -a` command).
 
+
+This assignment needs [tinygltf](https://github.com/syoyo/tinygltf) library. Download it with
+
+```bash
+$ cd acg-<username>
+$ git submodule update --init external/tinygltf
+```
+
 Now you are ready to go!
 
 ---

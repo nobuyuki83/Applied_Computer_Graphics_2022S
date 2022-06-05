@@ -47,7 +47,7 @@ Topics:
 |(4)<br>May 9| **Ray Casting I** | [task03](task03) | [[7]](http://nobuyuki-umetani.com/acg2022s/implicit_modeling.pdf) |
 |(6)<br>May 16| **Ray Casting II** | [task04](task04) | [[8]](http://nobuyuki-umetani.com/acg2022s/raycasting.pdf) |
 |(7)<br>May 23| Parametric curves / surfaces | [task05](task05) | [[9]](http://nobuyuki-umetani.com/acg2022s/curve.pdf)|
-|(8)<br>June 6|  Character deformation | [task06](task06) | - |
+|(8)<br>June 6|  Character deformation | [task06](task06) | [[10]](http://nobuyuki-umetani.com/acg2022s/character_deformation.pdf) |
 |(9)<br>June 13| Optimization | task08 | - |
 |(10)<br>June 20| Variational mesh deformation | task09 | - |
 |(11)<br>June 27| Guest lecture by Dr. Ryoichi Ando | - | - |
@@ -103,6 +103,7 @@ Look at the following document.
 - [[7] Implicit Modeling](http://nobuyuki-umetani.com/acg2022s/implicit_modeling.pdf)
 - [[8] Ray Casting](http://nobuyuki-umetani.com/acg2022s/raycasting.pdf)
 - [[9] Parametric Curve](http://nobuyuki-umetani.com/acg2022s/curve.pdf)
+- [[10] Character Deformation](http://nobuyuki-umetani.com/acg2022s/character_deformation.pdf)
 
 
 ## Reading Material
