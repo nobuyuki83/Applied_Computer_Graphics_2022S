@@ -49,7 +49,6 @@ double SamplingHemisphere(
   // hint4: first assume z is the up in the polar coordinate, then rotate the sampled direction such that "z" will be up.
   // write some codes below (5-10 lines)
 
-
   // below: naive implementation to "uniformly" sample hemisphere using "rejection sampling"
   // to not be used for the "problem2" in the assignment
   for(int i=0;i<10;++i) { // 10 is a magic number

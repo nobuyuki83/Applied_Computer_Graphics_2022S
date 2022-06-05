@@ -14,8 +14,9 @@ ENDIF()
 #############################
 # set project name
 
-project(task2)
+project(task06)
 
+# define a macro to get absolute path in C++
 add_definitions(-DSOURCE_DIR="${PROJECT_SOURCE_DIR}")
 
 #############################
@@ -38,6 +39,7 @@ include(${CMAKE_CURRENT_SOURCE_DIR}/../external/FindEigen3.cmake) # call script 
 
 include_directories(${PROJECT_NAME}
   ${CMAKE_CURRENT_SOURCE_DIR}/../external/delfem2/include
+  ${CMAKE_CURRENT_SOURCE_DIR}/../external
 )
 
 add_executable(${PROJECT_NAME}
