@@ -30,6 +30,10 @@ jobs:
       run: |
         git submodule update --init -- external/delfem2
 
+    - name: install tinygltf
+      run: |
+        git submodule update --init -- external/tinygltf
+
     - name: install eigen
       run: |
         sudo apt-get install libeigen3-dev
