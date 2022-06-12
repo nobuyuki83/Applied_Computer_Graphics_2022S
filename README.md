@@ -47,8 +47,8 @@ Topics:
 |(4)<br>May 9| **Ray Casting I** | [task03](task03) | [[7]](http://nobuyuki-umetani.com/acg2022s/implicit_modeling.pdf) |
 |(6)<br>May 16| **Ray Casting II** | [task04](task04) | [[8]](http://nobuyuki-umetani.com/acg2022s/raycasting.pdf) |
 |(7)<br>May 23| Parametric curves / surfaces | [task05](task05) | [[9]](http://nobuyuki-umetani.com/acg2022s/curve.pdf)|
-|(8)<br>June 6|  Character deformation | [task06](task06) | [[10]](http://nobuyuki-umetani.com/acg2022s/character_deformation.pdf) |
-|(9)<br>June 13| Optimization | task08 | - |
+|(8)<br>June 6|  Character deformation | [task06](task06) | [[10]](http://nobuyuki-umetani.com/acg2022s/character_deformation.pdf), [[11]](http://nobuyuki-umetani.com/acg2022s/jacobian.pdf) |
+|(9)<br>June 13| Optimization | [task07](task07) | [[12]](http://nobuyuki-umetani.com/acg2022s/optimization.pdf) |
 |(10)<br>June 20| Variational mesh deformation | task09 | - |
 |(11)<br>June 27| Guest lecture by Dr. Ryoichi Ando | - | - |
 |(12)<br>July 4| Grid-based Fluid Ⅰ | task10 | - |
@@ -80,7 +80,7 @@ Look at the following document.
 | [task04](task04)| Importance Sampling (Ambient Occlusion) |  <img src="task04/preview.png" width=100px> |
 | [task05](task05)| Rasterization of Cubic Bézier Curves (Sturm's Method) |<img src="task05/preview.png" width=100px>|
 | [task06](task06)| Linear Blend Skinning (Articulated Rigid Body, Inverse Binding Matrix) |<img src="task06/preview.png" width=100px>|
-| [task07](task07)| inverse kinematics ||
+| [task07](task07)| Inverse Kinematics (Levenberg–Marquardt method) | <img src="task07/preview.png" width=100px> |
 | [task08](task08)| as-rigid-as possible mesh deformation ||
 | [task09](task09)| subdivision surface ||
 | [task11](task11)| FTDT simulation ||
@@ -104,6 +104,8 @@ Look at the following document.
 - [[8] Ray Casting](http://nobuyuki-umetani.com/acg2022s/raycasting.pdf)
 - [[9] Parametric Curve](http://nobuyuki-umetani.com/acg2022s/curve.pdf)
 - [[10] Character Deformation](http://nobuyuki-umetani.com/acg2022s/character_deformation.pdf)
+- [[11] Jacobian & Hessian](http://nobuyuki-umetani.com/acg2022s/jacobian.pdf)
+- [[12] Optimization](http://nobuyuki-umetani.com/acg2022s/optimization.pdf) 
 
 
 ## Reading Material
