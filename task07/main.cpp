@@ -13,7 +13,7 @@
 
 class ArticulatedRigidBodies {
  public:
-  Eigen::Vector<double,8> angle{0.,0.,0.,0.,0.,0.,0.,0.}; // rotation angles in radian (0z, 1x,1y,1z, 2x,2y,2z, 3x)
+  Eigen::Matrix<double,8,1> angle{0.,0.,0.,0.,0.,0.,0.,0.}; // rotation angles in radian (0z, 1x,1y,1z, 2x,2y,2z, 3x)
   Eigen::Matrix4d C1, C2, C3, C4; // affine transformation from "local" to "deformed"
   Eigen::Vector3d pos_def;  // deformed output position
   Eigen::Matrix<double,3,8> diff_pos_def; // Jacobian of deformed output position w.r.t. angle
@@ -119,7 +119,7 @@ int main() {
     double time = glfwGetTime();
     Eigen::Vector3d pos_trg( 1.5+sin(3*time), cos(2*time), 1*cos(time)+1.5 ); // target position
     {
-      const Eigen::Vector<double,8> angle0 = arb.angle; // initial angle
+      const Eigen::Matrix<double,8,1> angle0 = arb.angle; // initial angle
       const Eigen::Vector3d pos_def = arb.pos_def; // output position
       const Eigen::Matrix<double,3,8> diff_pos_def = arb.diff_pos_def; // differentiation of output position
       double W0 = 0.5*(pos_def - pos_trg).dot(pos_def - pos_trg); // energy before update
