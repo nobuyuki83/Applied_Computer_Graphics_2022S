@@ -125,7 +125,9 @@ int main() {
       double W0 = 0.5*(pos_def - pos_trg).dot(pos_def - pos_trg); // energy before update
 
       // write some code below to update arb.angle to decrease energy using Levenberg–Marquardt(LM) algorithm
+      // if energy is zero, the tip of the cone (output position) and the red sphere (target position) match.
       // Adjust the coefficient LM algorithm such that the energy decrease after updating "arb.angle".
+      // The implementation should be 3-5 in lines.
 
       // editing ends here
       arb.UpdateTransformations();

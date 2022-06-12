@@ -2,7 +2,7 @@
 
 ![preview](preview.png)
 
-**Deadline: June 17th (Thu) at 15:00pm**
+**Deadline: June 16th (Thu) at 15:00pm**
 
 ----
 
@@ -31,7 +31,7 @@ Now you are ready to go!
 
 ## Problem 2
 
-Write code at `line #129` to implement linear blend skinning for articulated rigid body.  
+Write code at `line #129` to implement Levenberg–Marquardt method for inverse kinematics.
 
 Save the screenshot image overwriting `task07/problem2.png`
 
