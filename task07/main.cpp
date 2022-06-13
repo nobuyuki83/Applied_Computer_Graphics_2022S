@@ -13,7 +13,7 @@
 
 class ArticulatedRigidBodies {
  public:
-  Eigen::Matrix<double,8,1> angle{0.,0.,0.,0.,0.,0.,0.,0.}; // rotation angles in radian (0z, 1x,1y,1z, 2x,2y,2z, 3x)
+  Eigen::Matrix<double,1,8> angle{0.,0.,0.,0.,0.,0.,0.,0.}; // rotation angles in radian (0z, 1x,1y,1z, 2x,2y,2z, 3x)
   Eigen::Matrix4d C1, C2, C3, C4; // affine transformation from "local" to "deformed"
   Eigen::Vector3d pos_def;  // deformed output position
   Eigen::Matrix<double,3,8> diff_pos_def; // Jacobian of deformed output position w.r.t. angle
@@ -147,6 +147,10 @@ int main() {
     delfem2::opengl::DrawSphereAt(
         16,16,0.05,
         pos_trg.x(), pos_trg.y(), pos_trg.z());
+    ::glBegin(GL_LINES);
+    ::glVertex3dv(pos_trg.data());
+    ::glVertex3dv(arb.pos_def.data());
+    ::glEnd();
     // draw rigid bodies
     ::glEnable(GL_LIGHTING);
     glMaterialfv(GL_FRONT, GL_DIFFUSE, std::array<float,3>{1.f, 0.5f, 0.5f}.data());
