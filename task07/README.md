@@ -28,6 +28,10 @@ Now you are ready to go!
 
 ![problem1](problem1.png)
 
+By the way, the view navigation of this program works as 
+- rotation: `ctrl+left mouse button`,
+- translation: `shift+left mouse button`
+- scale: `mouse wheel`
 
 ## Problem 2
 
