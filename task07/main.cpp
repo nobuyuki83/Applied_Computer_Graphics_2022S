@@ -13,7 +13,7 @@
 
 class ArticulatedRigidBodies {
  public:
-  Eigen::Matrix<double,1,8> angle{0.,0.,0.,0.,0.,0.,0.,0.}; // rotation angles in radian (0z, 1x,1y,1z, 2x,2y,2z, 3x)
+  Eigen::Matrix<double,8,1> angle; // rotation angles in radian (0z, 1x,1y,1z, 2x,2y,2z, 3x)
   Eigen::Matrix4d C1, C2, C3, C4; // affine transformation from "local" to "deformed"
   Eigen::Vector3d pos_def;  // deformed output position
   Eigen::Matrix<double,3,8> diff_pos_def; // Jacobian of deformed output position w.r.t. angle
@@ -103,12 +103,13 @@ int main() {
   const Mesh rb3(std::string(SOURCE_DIR)+"/../assets/rb3.obj");
   const Mesh rb4(std::string(SOURCE_DIR)+"/../assets/rb4.obj");
   ArticulatedRigidBodies arb;
+  arb.angle.setZero();
   arb.UpdateTransformations();
   // --------------
   // opengl starts here
   delfem2::glfw::CViewer3 viewer(2);
   viewer.window_title = "task07";
-  viewer.trans[1] = -1.0;
+  viewer.trans[1] = -1.5;
   viewer.view_rotation = std::make_unique<delfem2::ModelView_Ztop>();
   if (!glfwInit()) { exit(EXIT_FAILURE); }
   glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, 2);
