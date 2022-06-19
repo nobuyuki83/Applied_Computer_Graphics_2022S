@@ -43,8 +43,8 @@ include_directories(${PROJECT_NAME}
 )
 
 add_executable(${PROJECT_NAME}
-   main_ans.cpp
-#   main.cpp
+#   main_ans.cpp
+   main.cpp
 )
 
 target_link_libraries(${PROJECT_NAME}
