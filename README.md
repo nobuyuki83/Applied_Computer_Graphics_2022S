@@ -49,7 +49,7 @@ Topics:
 |(7)<br>May 23| Parametric curves / surfaces | [task05](task05) | [[9]](http://nobuyuki-umetani.com/acg2022s/curve.pdf)|
 |(8)<br>June 6|  Character deformation | [task06](task06) | [[10]](http://nobuyuki-umetani.com/acg2022s/character_deformation.pdf), [[11]](http://nobuyuki-umetani.com/acg2022s/jacobian.pdf) |
 |(9)<br>June 13| Optimization | [task07](task07) | [[12]](http://nobuyuki-umetani.com/acg2022s/optimization.pdf) |
-|(10)<br>June 20| Variational mesh deformation | task09 | - |
+|(10)<br>June 20| Laplacian mesh deformation | [task08](task08) | - |
 |(11)<br>June 27| Guest lecture by Dr. Ryoichi Ando | - | - |
 |(12)<br>July 4| Grid-based Fluid Ⅰ | task10 | - |
 |(13)<br>July 11| Grid-based Fluid Ⅱ | - | - |
@@ -81,7 +81,7 @@ Look at the following document.
 | [task05](task05)| Rasterization of Cubic Bézier Curves (Sturm's Method) |<img src="task05/preview.png" width=100px>|
 | [task06](task06)| Linear Blend Skinning (Articulated Rigid Body, Inverse Binding Matrix) |<img src="task06/preview.png" width=100px>|
 | [task07](task07)| Inverse Kinematics (Levenberg–Marquardt method) | <img src="task07/preview.png" width=100px> |
-| [task08](task08)| as-rigid-as possible mesh deformation ||
+| [task08](task08)| Laplacian Mesh Deformation (Optimization) | <img src="task08/preview.png" width=100px> |
 | [task09](task09)| subdivision surface ||
 | [task11](task11)| FTDT simulation ||
 
