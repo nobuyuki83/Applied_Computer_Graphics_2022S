@@ -1,4 +1,4 @@
-# Task08: Laplacian Mesh Deformation (Optimization, Sparse Matrix)
+# Task08: Laplacian Mesh Deformation (Quadratic Programming, Sparse Matrix)
 
 ![preview](preview.png)
 
@@ -41,7 +41,16 @@ Save the screenshot image overwriting `task08/problem2.png`
 
 ![problem2](problem2.png)
 
+Look at Eigen's reference if you are interested in sparse linear solver: 
+- [Sparse linear algebra
+  ](https://eigen.tuxfamily.org/dox/group__Sparse__chapter.html)
 
 ## After Doing the Assignment
 
 After modify the code, push the code and submit a pull request. 
+
+
+
+## Reference 
+
+- O. Sorkine, D. Cohen-Or, Y. Lipman, M. Alexa, C. Rössl, and H.-P. Seidel. 2004. Laplacian surface editing. In Proceedings of the 2004 Eurographics/ACM SIGGRAPH symposium on Geometry processing (SGP '04). https://igl.ethz.ch/projects/Laplacian-mesh-processing/Laplacian-mesh-editing/laplacian-mesh-editing.pdf
