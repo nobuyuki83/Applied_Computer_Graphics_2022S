@@ -24,7 +24,7 @@ Eigen::MatrixXd CppPoissonBlending(
     unsigned int num_iteration){
   assert(src.cols() == src_mask.cols() );
   assert(src.cols() == src_mask.cols() );
-  Eigen::MatrixX<double> ret = dist.cast<double>();
+  Eigen::MatrixXd ret = dist.cast<double>();
   for(unsigned int itr=0;itr<num_iteration;++itr) {
     for (unsigned int src_i = 1; src_i < src.rows() - 1; ++src_i) {
       for (unsigned int src_j = 1; src_j < src.cols() - 1; ++src_j) {

@@ -67,3 +67,5 @@ build
 !assets/rb2.obj
 !assets/rb3.obj
 !assets/rb4.obj
+
+task09/cppmodule.cbp
