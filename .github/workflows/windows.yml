@@ -4,7 +4,7 @@ on:
   push:
     branches: [ main ]
   pull_request:
-    branches: [ main, task0, task00, task1, task01, task2, task02, task3, task03, task05, task5, task06, task6, task07, task7, task08, task8]
+    branches: [ main, task0, task00, task1, task01, task2, task02, task3, task03, task05, task5, task06, task6, task07, task7, task08, task8, task09, task9]
 
 env:
   BUILD_TYPE: Debug
@@ -32,9 +32,13 @@ jobs:
       run: |
         git submodule update --init -- external/tinygltf
 
-    - name: get_eigen
+    - name: get eigen
       run: |
         git submodule update --init -- external/eigen
+
+    - name: get pybind11
+      run: |
+        git submodule update --init -- external/pybind11    
 
     - name: build
       run: |

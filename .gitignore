@@ -33,6 +33,13 @@
 
 .vs
 .vscode
+
+*.vcxproj
+*.pdb
+*.ilk
+*.tlog
+*.sln
+
 CMakeSettings.json
 CMakeFiles
 cmake_install.cmake
