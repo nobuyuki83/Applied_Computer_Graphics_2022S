@@ -16,10 +16,10 @@ namespace py = pybind11;
  * @param src_mask
  * @return
  */
-Eigen::MatrixX<double> CppPoissonBlending(
-    const Eigen::MatrixX<unsigned char>& dist,
-    const Eigen::MatrixX<unsigned char>& src,
-    const Eigen::MatrixX<unsigned char>& src_mask,
+Eigen::MatrixXd CppPoissonBlending(
+    const Eigen::Matrix<unsigned char,Eigen::Dynamic,Eigen::Dynamic>& dist,
+    const Eigen::Matrix<unsigned char,Eigen::Dynamic,Eigen::Dynamic>& src,
+    const Eigen::Matrix<unsigned char,Eigen::Dynamic,Eigen::Dynamic>& src_mask,
     const std::array<int,2> offset,
     unsigned int num_iteration){
   assert(src.cols() == src_mask.cols() );

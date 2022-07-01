@@ -12,8 +12,8 @@ If you have not done the [task00](../task00), do it first to set up the C++ grap
 
 Follow [this document](../doc/submit.md) to submit the assignment, In a nutshell, before doing the assignment,  
 - make sure you synchronized the `main ` branch of your local repository  to that of remote repository.
-- make sure you created branch `task08` from `main` branch.
-- make sure you are currently in the `task08` branch (use `git branch -a` command).
+- make sure you created branch `task09` from `main` branch.
+- make sure you are currently in the `task09` branch (use `git branch -a` command).
 
 This assignment needs `pybind11` library. Download it with
 
@@ -43,7 +43,7 @@ Now you are ready to go!
 
 ## Problem 2
 
-Write code at `line #45` to implement Laplacian mesh deformation.
+Write code at `line #45` to implement Poisson image editing.
 
 Save the screenshot image overwriting `task09/problem2.png`
 
