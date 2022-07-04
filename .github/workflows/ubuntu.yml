@@ -55,4 +55,4 @@ jobs:
 
     - name: run demo09
       run: |
-        python3 blend.py
+        python3 task09/blend.py
