@@ -51,7 +51,7 @@ Topics:
 |(9)<br>June 13| Optimization | [task07](task07) | [[12]](http://nobuyuki-umetani.com/acg2022s/optimization.pdf) |
 |(10)<br>June 20| Laplacian mesh deformation | [task08](task08) | [[13]](http://nobuyuki-umetani.com/acg2022s/mesh_laplacian.pdf) |
 |(11)<br>June 27| Guest lecture by Dr. Ryoichi Ando | - | - |
-|(12)<br>July 4| Grid-based Fluid Ⅰ | task10 | - |
+|(12)<br>July 4| Grid-based Fluid Ⅰ | [task09](task09) | - [[14]](http://nobuyuki-umetani.com/acg2022s/pde.pdf) |
 |(13)<br>July 11| Grid-based Fluid Ⅱ | - | - |
 
 
@@ -82,7 +82,7 @@ Look at the following document.
 | [task06](task06)| Linear Blend Skinning (Articulated Rigid Body, Inverse Binding Matrix) |<img src="task06/preview.png" width=100px>|
 | [task07](task07)| Inverse Kinematics (Levenberg–Marquardt method) | <img src="task07/preview.png" width=100px> |
 | [task08](task08)| Laplacian Mesh Deformation (Quadratic Programming, Sparse Matrix) | <img src="task08/preview.png" width=100px> |
-| [task09](task09)| subdivision surface ||
+| [task09](task09)| Poisson Image Editing | <img src="task09/preview.png" width=100px> |
 | [task11](task11)| FTDT simulation ||
 
 ### Policy
@@ -107,6 +107,7 @@ Look at the following document.
 - [[11] Jacobian & Hessian](http://nobuyuki-umetani.com/acg2022s/jacobian.pdf)
 - [[12] Optimization](http://nobuyuki-umetani.com/acg2022s/optimization.pdf) 
 - [[13] Mesh Laplacian](http://nobuyuki-umetani.com/acg2022s/mesh_laplacian.pdf)
+- [[14] PDE](http://nobuyuki-umetani.com/acg2022s/pde.pdf) 
 
 
 ## Reading Material
