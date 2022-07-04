@@ -11,9 +11,9 @@ namespace py = pybind11;
 
 /**
  * blending src image to dist image
- * @param dist
- * @param src
- * @param src_mask
+ * @param dist　the distination image on which we put src image
+ * @param src the source image
+ * @param src_mask the mask of the source image
  * @return
  */
 Eigen::MatrixXd CppPoissonBlending(
@@ -25,7 +25,7 @@ Eigen::MatrixXd CppPoissonBlending(
   assert(src.cols() == src_mask.cols() );
   assert(src.cols() == src_mask.cols() );
   Eigen::MatrixXd ret = dist.cast<double>();
-  for(unsigned int itr=0;itr<num_iteration;++itr) {
+  for(unsigned int itr=0;itr<num_iteration;++itr) {  // Gauss-Seidel iteration
     for (unsigned int src_i = 1; src_i < src.rows() - 1; ++src_i) {
       for (unsigned int src_j = 1; src_j < src.cols() - 1; ++src_j) {
         if (src_mask(src_i, src_j) == 0) { continue; }
@@ -44,8 +44,9 @@ Eigen::MatrixXd CppPoissonBlending(
         const double ret_w = ret(ret_i-1, ret_j);
         // write some code here to implement Poisson image editing
         double ret_c = src_c; // change this line
-        ret_c = (ret_c>255.) ? 255. : ret_c;
-        ret_c = (ret_c<0.) ? 0. : ret_c;
+        // no edit below
+        ret_c = (ret_c>255.) ? 255. : ret_c; // clamp
+        ret_c = (ret_c<0.) ? 0. : ret_c; // clamp
         ret(ret_i, ret_j) = ret_c;
       }
     }

@@ -46,3 +46,13 @@ jobs:
       run: |
         cmake .
         cmake --build .
+
+    - name: install python dependency
+      run: |
+        python3 -m pip install --upgrade pip
+        python3 -m pip install --upgrade numpy
+        python3 -m pip install --upgrade Pillow
+
+    - name: run demo09
+      run: |
+        python3 blend.py
