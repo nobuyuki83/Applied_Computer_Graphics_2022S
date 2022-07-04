@@ -51,7 +51,7 @@ jobs:
         python3 -m pip install --upgrade numpy
         python3 -m pip install --upgrade Pillow
 
-    - name: run demo09
-      run: |
-        cd task09
-        python3 blend.py
+#    - name: run demo09
+#      run: |
+#        cd task09
+#        python3 blend.py
