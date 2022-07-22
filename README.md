@@ -52,7 +52,7 @@ Topics:
 |(10)<br>June 20| Laplacian mesh deformation | [task08](task08) | [[13]](http://nobuyuki-umetani.com/acg2022s/mesh_laplacian.pdf) |
 |(11)<br>June 27| Guest lecture by Dr. Ryoichi Ando | - | - |
 |(12)<br>July 4| Grid-based Fluid Ⅰ | [task09](task09) | [[14]](http://nobuyuki-umetani.com/acg2022s/pde.pdf) |
-|(13)<br>July 11| Grid-based Fluid Ⅱ | - | - |
+|(13)<br>July 11| Grid-based Fluid Ⅱ | - | [[15]](http://nobuyuki-umetani.com/acg2022s/fluid_simulation.pdf)  |
 
 
 ## Grading
@@ -83,7 +83,6 @@ Look at the following document.
 | [task07](task07)| Inverse Kinematics (Levenberg–Marquardt method) | <img src="task07/preview.png" width=100px> |
 | [task08](task08)| Laplacian Mesh Deformation (Quadratic Programming, Sparse Matrix) | <img src="task08/preview.png" width=100px> |
 | [task09](task09)| Poisson Image Editing((Gauss-Seidel method, pybind11)) | <img src="task09/preview.png" width=100px> |
-| [task11](task11)| FTDT simulation ||
 
 ### Policy
 
@@ -108,6 +107,7 @@ Look at the following document.
 - [[12] Optimization](http://nobuyuki-umetani.com/acg2022s/optimization.pdf) 
 - [[13] Mesh Laplacian](http://nobuyuki-umetani.com/acg2022s/mesh_laplacian.pdf)
 - [[14] PDE](http://nobuyuki-umetani.com/acg2022s/pde.pdf) 
+- [[15] Grid-based Fluid](http://nobuyuki-umetani.com/acg2022s/fluid_simulation.pdf) 
 
 
 ## Reading Material
